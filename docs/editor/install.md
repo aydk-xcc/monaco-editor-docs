@@ -1,11 +1,73 @@
 # 安装
 
-# 版本说明
-monaco-editor（后面就简称me吧）作为vscode的编辑器，整体功能非常强大，扩展性也非常好，只是官方文档用起来比较不“友好”，学习过程中，在网上查教程或者资料的时候，发现很多资料和me的版本有关系，这也给使用过程中带来一些困惑，所以有缘人看到这个文档的时候，需要注意的是，当前这份文档是基于 [v0.37.1](https://github.com/microsoft/monaco-editor/releases/tag/v0.37.1),当然了，后学也会基于新版本更新文档。
+欢迎大家补充！
 
-# 内容来源
-::: tip 本文档的内容来源主要有几个方面：
-1. safa
-:::
+## vue2 + webpack4
+1. 安装
+webpack的版本会影响monaco的版本，这里踩过坑 [vue2 + webpack4 运行报错](../questions.md#vue2--webpack4-运行报错)
+``` javascript
+// webpack5可以选择较新的版本
+npm install --save monaco-editor@0.30.1
+
+// 和monaco-editor版本对应，可以查看上面的踩坑链接
+npm install --save monaco-editor-webpack-plugin@6
+```
+2. 配置webpack插件
+``` javascript
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+module.exports = {
+    ...
+    plugins: [
+        ...
+        new MonacoWebpackPlugin() // 这里使用
+    ],
+}
+```
+3. 使用
+``` javascript
+<template>
+    <div id="editor"></div>
+</template>
+<script>
+import * as monaco from 'monaco-editor';
+export default {
+    name: 'Monaco',
+    data() {
+        return {
+            editor: null
+        };
+    },
+    mounted() {
+        this.editor = monaco.editor.create(document.getElementById('editor'), {
+            value: 'const foo = () => 0;',
+            language: 'javascript',
+            theme: 'vs-dark'
+        });
+    },
+    beforeDestroy() {
+        this.editor.dispose();
+    }
+};
+</script>
+<style scoped>
+    #editor {
+        width: 100%;
+        height: 500px;
+    }
+</style>
+
+```
+这样就可以运行了
+
+## vue3 + vite
+1. 安装
+``` javascript
+npm install --save monaco-editor
+npm install --save monaco-editor
+```
+2. 引入worker
+``` javascript
+
+```
 
 

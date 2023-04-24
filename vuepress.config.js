@@ -15,19 +15,6 @@ export default {
       { text: '自定义语言', link: '/test1/' },
       { text: '官方文档', link: 'https://microsoft.github.io/monaco-editor/' },
     ],
-    // site-level locales config
-    locales: {
-      '/': {
-        lang: 'en-US',
-        title: 'VuePress',
-        description: 'Vue-powered Static Site Generator',
-      },
-      '/zh/': {
-        lang: 'zh-CN',
-        title: 'VuePress',
-        description: 'Vue 驱动的静态网站生成器',
-      },
-    },
     sidebar: [
       // SidebarItem
       {
@@ -35,7 +22,10 @@ export default {
         children: [
           // SidebarItem
           '/editor/declare.md',
-          '/editor/install.md'
+          '/editor/install.md',
+          '/editor/create.md',
+          '/editor/theme.md',
+          '/questions.md'
         ],
       }
     ]
