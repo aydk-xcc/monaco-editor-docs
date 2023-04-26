@@ -6,3 +6,22 @@ monaco-editor 中文文档
 在线地址：[在线地址](https://aydk-xcc.github.io/monaco-editor-docs/)
 
 完善中ing
+
+## 1. 安装
+
+``` shell
+pnpm install
+```
+
+## 2. 运行
+``` shell
+pnpm docs:dev
+
+// http://localhost:8081/monaco-editor-docs/
+```
+
+## 3.打包
+
+``` shell
+pnpm docs:build
+```
