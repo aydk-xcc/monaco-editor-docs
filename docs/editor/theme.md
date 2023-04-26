@@ -1,9 +1,17 @@
 # 主题配置
 
 ## 颜色
+```javascript
+monaco.editor.create(document.getElementById("container"), {
+	value: "My to-do list:\n* buy milk\n* buy coffee\n* write awesome code",
+	language: "text/plain",
+	fontFamily: "Arial",
+	fontSize: 20,
+});
+```
 这是我安装完配置好之后页面效果:
 ![theme-1](/img/theme-1.png)
-看着和官方的效果差了很多意思，先配置一下色彩吧，看官方demo，描述自定义color可以通过css和js方式来进行覆盖，接下来分别试一下：
+看官方demo，自定义color可以通过css和js方式来进行覆盖，接下来分别试一下：
 
 ``` javascript 
 // The editor colors can be customized through CSS or through JS
@@ -24,26 +32,160 @@ monaco.editor.defineTheme("myTheme", {
 });
 monaco.editor.setTheme("myTheme");
 
-monaco.editor.create(document.getElementById("container"), {
-	value: "My to-do list:\n* buy milk\n* buy coffee\n* write awesome code",
-	language: "text/plain",
-	fontFamily: "Arial",
-	fontSize: 20,
-});
 ```
+设置主题之后之后页面效果:
+![theme-2](/img/theme-2.png)
 通过 `defineTheme` 定义一个主题, `setTheme`设置定义的主题生效。其中`defineTheme` 支持的参数如下：
 ### base 
-+ 类型  `string`
-+ 默认值 `"vs" | "vs-dark" | "hc-black" | "hc-light"`
-+ 详情 `必填`，默认的主题
-+ 参考
++ 类型: `string` `必选`
++ 默认值: ``
++ 可选项: `"vs" | "vs-dark" | "hc-black" | "hc-light"`
++ 描述: `表示主题的基础样式，可以是以下值之一："vs"：Visual Studio 样式。"vs-dark"：Visual Studio 暗色样式。"hc-black"：高对比度黑色样式。"hc-light"：高对比度白色样式`
+
 ### colors
++ 类型: `IColors` `必选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `其中包含了一些键值对，每个键值对表示一个颜色的定义。键是颜色的名称，值是颜色的 CSS 字符串。`
+
+以下是一个示例：
+```javascript
+Copy codemonaco.editor.defineTheme('myTheme', {
+    base: 'vs',
+    inherit: true,
+    colors: {
+        'editor.background': '#1e1e1e',
+        'editor.foreground': '#d4d4d4',
+        'editor.selectionBackground': '#add6ff',
+        'editor.lineHighlightBackground': '#2a2a2a',
+        'editorCursor.foreground': '#d4d4d4',
+        'editorWhitespace.foreground': '#404040'
+    },
+    rules: [
+        { token: 'comment', foreground: 'green', fontStyle: 'italic' },
+        { token: 'keyword', foreground: 'blue', fontStyle: 'bold' }
+    ]
+});
+```
+其中，`editor.background`表示编辑器的背景色，`editor.foreground`表示编辑器的前景色，`editor.selectionBackground`表示选中文本的背景色，`editor.lineHighlightBackground`表示当前行的背景色，`editorCursor.foreground`表示光标的颜色，`editorWhitespace.foreground`表示空格的颜色。
+
+在定义了颜色之后，我们还可以在规则中使用这些颜色，例如：
+```javascript
+Copy codemonaco.editor.defineTheme('myTheme', {
+    base: 'vs',
+    inherit: true,
+    colors: {
+        'editor.background': '#1e1e1e',
+        'editor.foreground': '#d4d4d4',
+        'editor.selectionBackground': '#add6ff',
+        'editor.lineHighlightBackground': '#2a2a2a',
+        'editorCursor.foreground': '#d4d4d4',
+        'editorWhitespace.foreground': '#404040'
+    },
+    rules: [
+        { token: 'comment', foreground: 'green', fontStyle: 'italic' },
+        { token: 'keyword', foreground: 'blue', fontStyle: 'bold' },
+        { token: 'string', foreground: 'editor.foreground', background: 'editor.background' }
+    ]
+});
+```
+
 ### encodedTokensColors
++ 类型: `string[]` `可选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `来定义主题中的编码 token 的颜色。编码 token 是指一些特殊的 token，它们的值是一些 Unicode 字符，例如 emoji 表情等。`
+
+以下是一个示例：
+```javascript
+Copy codemonaco.editor.defineTheme('myTheme', {
+    base: 'vs',
+    inherit: true,
+    encodedTokensColors: {
+        'editorBracketMatch.background': '#ffa500',
+        'editorBracketMatch.border': '#ffa500'
+    },
+    rules: [
+        { token: 'comment', foreground: 'green', fontStyle: 'italic' },
+        { token: 'keyword', foreground: 'blue', fontStyle: 'bold' }
+    ]
+});
+```
+其中，`editorBracketMatch.background`表示匹配的括号的背景色，`editorBracketMatch.border`表示匹配的括号的边框颜色。
+
+在定义了编码 token 的颜色之后，我们还可以在规则中使用这些颜色，例如：
+```javascript
+Copy codemonaco.editor.defineTheme('myTheme', {
+    base: 'vs',
+    inherit: true,
+    encodedTokensColors: {
+        'editorBracketMatch.background': '#ffa500',
+        'editorBracketMatch.border': '#ffa500'
+    },
+    rules: [
+        { token: 'comment', foreground: 'green', fontStyle: 'italic' },
+        { token: 'keyword', foreground: 'blue', fontStyle: 'bold' },
+        { token: 'string.escape', foreground: 'editorBracketMatch.background' }
+    ]
+});
+```
+在这个示例中，我们定义了一个名为`string.escape`的编码 token，它的前景色使用了`editorBracketMatch.background`定义的颜色。
+
 ### inherit
++ 类型: `boolean` `必选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `表示是否继承基础样式，可以是一个布尔值。`
+
+
 ### rules
++ 类型: `ITokenThemeRule[]` `必选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `用于定义语法高亮的规则。具体来说，它定义了一个 token 的样式，包括前景色、背景色、字体样式等。`
+
+::: tip ITokenThemeRule
+#### background
++ 类型: `string` `可选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `表示 token 的背景色，可以是一个 CSS 颜色值。`
+
+#### fontStyle
++ 类型: `string` `可选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `表示 token 的字体样式，可以是一个字符串，包括以下值：`
+
+#### foreground
++ 类型: `string` `可选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `表示 token 的前景色，可以是一个 CSS 颜色值。`
+
+#### token
++ 类型: `string` `必选`
++ 默认值: `-`
++ 可选项: `-`
++ 描述: `表示要应用规则的 token 类型，可以是一个字符串或一个正则表达式。`
+:::
+
+例如，以下是一个定义了两个规则的示例：
+```javascript
+Copy codeconst myTheme: monaco.editor.ITokenTheme = {
+    base: 'vs',
+    inherit: true,
+    rules: [
+        { token: 'comment', foreground: 'green', fontStyle: 'italic' },
+        { token: 'keyword', foreground: 'blue', fontStyle: 'bold' }
+    ]
+};
+```
+这个示例定义了两个规则，分别应用于 `comment`和 `keyword`类型的 token。其中，`comment`类型的token 会使用绿色的前景色和斜体字体样式，而 `keyword`类型的 token 会使用蓝色的前景色和粗体字体样式。
 
 
-
+### 附录
+官网demo列的颜色的样式
 
 ``` javascript
 // A list of color names:
@@ -171,8 +313,4 @@ Object.keys(colors).forEach(function(key) {
     console.log( '//' + val.description + '\n' + key);
 })
 */
-```
-
-
-```
 ```
