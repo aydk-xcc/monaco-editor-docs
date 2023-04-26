@@ -1,4 +1,3 @@
-import { defineUserConfig } from 'vuepress';
 import { defaultTheme } from 'vuepress';
 import { searchPlugin } from '@vuepress/plugin-search';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
