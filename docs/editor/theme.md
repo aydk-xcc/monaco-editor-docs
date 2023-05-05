@@ -10,6 +10,7 @@ monaco.editor.create(document.getElementById("container"), {
 });
 ```
 这是我安装完配置好之后页面效果:
+
 ![theme-1](/img/theme-1.png)
 看官方demo，自定义color可以通过css和js方式来进行覆盖，接下来分别试一下：
 
@@ -34,6 +35,7 @@ monaco.editor.setTheme("myTheme");
 
 ```
 设置主题之后之后页面效果:
+
 ![theme-2](/img/theme-2.png)
 通过 `defineTheme` 定义一个主题, `setTheme`设置定义的主题生效。其中`defineTheme` 支持的参数如下：
 ### base 
