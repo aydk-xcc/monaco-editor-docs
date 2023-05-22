@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /img/code.png
 heroText: Monaco-editor 学习文档
 tagline: 个人学习整理
 actions:
