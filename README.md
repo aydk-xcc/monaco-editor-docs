@@ -10,7 +10,7 @@ monaco-editor 中文文档
 完善中ing
 
 欢迎微信扫描进群交流：
-![theme-1](/img/code.png)
+![theme-1](docs/.vuepress/public/img/code.png)
 
 ## 1. 安装
 
