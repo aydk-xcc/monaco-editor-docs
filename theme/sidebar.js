@@ -14,5 +14,9 @@ export default sidebar({
   ],
   "/language/": [
     '/language/custom-yaml.md',
+  ],
+  "/example/": [
+    '/example/README.md',
+    '/example/cursor.md',
   ]
 });

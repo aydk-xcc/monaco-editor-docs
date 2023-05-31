@@ -929,6 +929,18 @@ monaco.editor.create(domElement, {
 + 可选项: `-`
 + 描述: `用于设置制表符的大小。可以设置为任何数字值。`
 
+例子：
+```javascript
+codemonaco.editor.setTheme('vs-dark');
+monaco.editor.setLanguage('javascript');
+
+var editor = monaco.editor.create(document.getElementById('container'), {
+  tabSize: 2,
+  insertSpaces: true
+});
+```
+在上面的代码中，我们使用`tabSize`属性设置tab键的大小为2个空格，使用`insertSpaces`属性设置是否使用空格代替制表符。你可以根据需要调整这些属性的值。
+
 ### theme
 + 类型: `string` `可选`
 + 默认值: `'vs'`
@@ -1006,6 +1018,23 @@ monaco.editor.create(domElement, {
 + 默认值: `'off'`
 + 可选项: `'off' | 'on' | 'wordWrapColumn' | 'bounded'`
 + 描述: `用于控制文本如何换行。可以选择 'off'、'on'、'wordWrapColumn' 或 'bounded' 中的一种。`
+
+设置 Monaco Editor 中的单行最大长度，可以使用 `wordWrap`选项和 `wordWrapColumn`选项。
+
+`wordWrap`选项用于启用或禁用自动换行。如果禁用自动换行，则文本将在指定的列数内换行。`wordWrapColumn`选项用于指定文本在哪个列数内换行。如果设置为`0`，则禁用自动换行。
+
+以下是一个示例代码，演示如何设置 Monaco Editor 中的单行最大长度：
+``` javascript
+codeconst editor = monaco.editor.create(document.getElementById("container"), {
+  value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  language: "javascript",
+  wordWrap: "on",
+  wordWrapColumn: 80
+});
+```
+在上面的示例中，`wordWrap`选项设置为 `on`，这意味着编辑器将在指定的列数（`wordWrapColumn`选项）处换行。在这个例子中，`wordWrapColumn`被设置为 `80`，这意味着编辑器将在第 80 个字符处换行。
+您可以根据需要调整 `wordWrapColum`选项的值来设置单行最大长度。
+
 
 ### wordWrapBreakAfterCharacters
 + 类型: `string` `可选`
