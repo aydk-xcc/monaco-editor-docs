@@ -3,6 +3,11 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   { text: "指南", icon: "discover", link: "/editor/declare.md" },
   {
+    text: "样例",
+    icon: "creative",
+    link: "/example/"
+  },
+  {
     text: "自定义语言",
     icon: "creative",
     prefix: "/language/",
