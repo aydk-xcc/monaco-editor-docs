@@ -12,7 +12,7 @@ export default sidebar({
     // '/editor/action.md',
     '/editor/questions.md'
   ],
-  "language": [
-      
+  "/language/": [
+    '/language/custom-yaml.md',
   ]
 });
