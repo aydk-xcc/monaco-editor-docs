@@ -19,6 +19,12 @@ export default {
   plugins: [
     searchPlugin({
         // 配置项
+        locales: {
+          '/': {
+            placeholder: '搜索',
+          },
+        },
+        maxSuggestions: 10
     }),
     googleAnalyticsPlugin({
       // 配置项

@@ -11,39 +11,39 @@ this.editor = monaco.editor.create(document.getElementById('editor'), {
 + options: `可选 ` 配置参数 下面会展开说
 + override: `可选` 重写
 
-## options
-### acceptSuggestionOnCommitCharacter
+# options
+##  acceptSuggestionOnCommitCharacter
 + 类型: `Bollean` `可选`
 + 默认值: `true`
 + 可选项: `true | false`
 + 描述: `用于控制在输入时是否自动接受建议。如果启用了该设置，当您输入一个特定的字符时，编辑器将自动接受建议。如果禁用了该设置，则不会自动接受建议。
 如果要启用 acceptSuggestionOnCommitCharacter设置，将其设置为 true。如果要禁用该设置，则将其设置为 false。如果您希望在输入特定字符时自动接受建议，则可以将其设置为一个字符或字符数组。例如，如果要在输入 . 或 : 时自动接受建议，则可以将其设置为 ['.', ':']。`
 
-### acceptSuggestionOnEnter
+##  acceptSuggestionOnEnter
 + 类型: `String` `可选`
 + 默认值: `on`
 + 可选项:  `"on" | "off" | "smart"`
 + 描述: `用于控制在按下 Enter键时是否自动接受建议。如果启用了该设置，当您按下Enter键时，编辑器将自动接受建议。如果禁用了该设置，则不会自动接受建议。`
 
-### accessibilityHelpUrl
+##  accessibilityHelpUrl
 + 类型: `String` `可选`
 + 默认值: `https://go.microsoft.com/fwlink/?linkid=852450`
 + 可选项:  `-`
 + 描述: `用于指定辅助功能帮助文档的URL。如果启用了该设置，并且用户按下 F1键，则编辑器将打开指定的URL以显示帮助文档。如果禁用了该设置，则不会打开帮助文档。如果要禁用该设置，则将其设置为 null。`
 
-### accessibilityPageSize
+##  accessibilityPageSize
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项:  `-`
 + 描述: `用于指定辅助功能分页大小。如果启用了该设置，并且用户使用辅助功能浏览器或屏幕阅读器浏览编辑器内容，则编辑器将按照指定的分页大小进行分页。如果禁用了该设置，则不会进行分页。如果要禁用该设置，则将其设置为 null。`
 
-### accessibilitySupport
+##  accessibilitySupport
 + 类型: `string` `可选`
 + 默认值: `auto`
 + 可选项:  `"on" | "off" | "auto"`
 + 描述: `用于启用或禁用辅助功能支持。如果启用了该设置，则编辑器将支持辅助功能浏览器和屏幕阅读器。如果禁用了该设置，则不会支持辅助功能。`
 
-### ariaContainerElement
+##  ariaContainerElement
 + 类型: `HTMLElement` `可选`
 + 默认值: `document.body`
 + 可选项:  `-`
@@ -65,19 +65,19 @@ aria-label="Click me"
 使用ARIA元素可以使Web应用程序更易于使用和访问，特别是对于那些使用辅助功能浏览器和屏幕阅读器的用户。
 :::
 
-### ariaLabel
+##  ariaLabel
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项:  `-`
 + 描述: `用于指定编辑器的ARIA标签。如果启用了该设置，则编辑器将使用指定的ARIA标签来描述编辑器。如果禁用了该设置，则编辑器将使用默认的ARIA标签。如果要禁用该设置，则将其设置为 null。`
 
-### autoClosingBrackets
+##  autoClosingBrackets
 + 类型: `EditorAutoClosingStrategy` `可选`
 + 默认值: `-`
 + 可选项:  `"always" | "languageDefined" | "beforeWhitespace" | "never"`
 + 描述: `用于控制在输入括号时是否自动闭合括号。如果启用了该设置，当您输入左括号时，编辑器将自动插入右括号。如果禁用了该设置，则不会自动插入右括号。`
 
-### autoClosingDelete
+##  autoClosingDelete
 + 类型: `EditorAutoClosingEditStrategy` `可选`
 + 默认值: `-`
 + 可选项:  `"always" | "auto" | "never"`
@@ -88,13 +88,13 @@ aria-label="Click me"
 。
 :::
 
-### autoClosingOvertype
+##  autoClosingOvertype
 + 类型: `EditorAutoClosingEditStrategy` `可选`
 + 默认值: `-`
 + 可选项:  `"always" | "auto" | "never"`
 + 描述: `用于控制在覆盖模式下输入括号时是否自动闭合括号。如果启用了该设置，当您在覆盖模式下输入一个左括号时，编辑器将自动插入相应的右括号。如果禁用了该设置，则不会自动插入右括号。如果您希望仅在输入特定类型的括号时自动闭合括号,配置同autoClosingDelete`
 
-### autoClosingQuotes
+##  autoClosingQuotes
 + 类型: `EditorAutoClosingStrategy` `可选`
 + 默认值: `-`
 + 可选项:  `"always" | "languageDefined" | "beforeWhitespace" | "never"`
@@ -104,13 +104,13 @@ aria-label="Click me"
 { languageDefined: false, mark: '"' }。
 :::
 
-### autoDetectHighContrast
+##  autoDetectHighContrast
 + 类型: `Bollean` `可选`
 + 默认值: `true`
 + 可选项: `true | false`
 + 描述: `用于控制编辑器是否自动检测高对比度模式。如果启用了该设置，当用户在操作系统中启用高对比度模式时，编辑器将自动应用高对比度主题。如果禁用了该设置，则不会自动应用高对比度主题。`
 
-### autoIndent
+##  autoIndent
 + 类型: `string` `可选`
 + 默认值: `advanced`
 + 可选项: `"none" | "advanced" | "full" | "brackets" | "keep"`
@@ -129,7 +129,7 @@ aria-label="Click me"
 "keep"：保持缩进不变。编辑器将不会自动缩进，而是保留输入的缩进
 :::
 
-### autoSurround
+##  autoSurround
 + 类型: `string` `可选`
 + 默认值: `advanced`
 + 可选项: `"languageDefined" | "quotes" | "brackets" | "never"`
@@ -146,13 +146,13 @@ aria-label="Click me"
 "never"：不自动添加括号或引号。
 :::
 
-### automaticLayout
+##  automaticLayout
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制编辑器是否自动调整其布局以适应其容器的大小。如果启用了该设置，当编辑器所在的容器大小发生变化时，编辑器将自动调整其布局以适应新的容器大小。如果禁用了该设置，则编辑器将保持其初始大小，不会自动调整布局。`
 
-### bracketPairColorization
+##  bracketPairColorization
 + 类型: `IBracketPairColorizationOptions` `可选`
 + 默认值: `disable`
 + 可选项: `-`
@@ -164,42 +164,42 @@ aria-label="Click me"
 
 "independentColorPoolPerBracketType"：用于控制是否为不同类型的括号使用独立的颜色池。如果启用了该设置，编辑器将为每种类型的括号（例如圆括号、方括号、花括号等）使用独立的颜色池，以确保每种类型的括号都有不同的突出显示颜色。如果禁用了该设置，则编辑器将使用相同的颜色池为所有类型的括号分配颜色。
 :::
-### codeActionsOnSaveTimeout
+##  codeActionsOnSaveTimeout
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制在保存文件时执行代码操作的超时时间。如果启用了该设置，当您保存文件时，编辑器将等待指定的时间（以毫秒为单位），以便在执行代码操作之前等待其他可能的代码操作完成。如果禁用了该设置，则编辑器将立即执行代码操作。（以毫秒为单位）`
-### codeLens
+##  codeLens
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用代码镜头功能。如果启用了该设置，编辑器将在代码中显示代码镜头，这些代码镜头可以提供有关代码的其他信息，例如代码的引用、测试覆盖率等。如果禁用了该设置，则不会显示代码镜头。`
-### codeLensFontFamily
+##  codeLensFontFamily
 + 类型: `string` `可选`
 + 默认值: `editor font family`
 + 可选项: `-`
 + 描述: `用于控制代码镜头中文本的字体系列。如果启用了该设置，编辑器将使用指定的字体系列来呈现代码镜头中的文本。如果禁用了该设置，则编辑器将使用默认的字体系列。`
-### codeLensFontSize
+##  codeLensFontSize
 + 类型: `number` `可选`
 + 默认值: `90% of the editor font size`
 + 可选项: `-`
 + 描述: `用于控制代码镜头中文本的字体大小。如果启用了该设置，编辑器将使用指定的字体大小来呈现代码镜头中的文本。如果禁用了该设置，则编辑器将使用默认的字体大小。`
-### colorDecorators
+##  colorDecorators
 + 类型: `boolean` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制是否启用颜色装饰器。如果启用了该设置，编辑器将使用颜色装饰器来突出显示代码中的特定文本，例如变量、函数等。如果禁用了该设置，则不会使用颜色装饰器。`
-### colorDecoratorsLimit
+##  colorDecoratorsLimit
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制颜色装饰器的最大数量。如果启用了该设置，编辑器将限制颜色装饰器的数量，以避免性能问题。如果禁用了该设置，则编辑器将不会限制颜色装饰器的数量。`
-### columnSelection
+##  columnSelection
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用列选择模式。如果启用了该设置，编辑器将允许您选择文本的列而不是行。如果禁用了该设置，则编辑器将只允许您选择文本的行。`
-### comments
+##  comments
 + 类型: `IEditorCommentsOptions` `可选`
 + 默认值: `-`
 + 可选项: `-`
@@ -210,7 +210,7 @@ aria-label="Click me"
 
 "insertSpace"：用于控制是否在注释标记后插入空格。如果启用了该设置，编辑器将在注释标记后插入一个空格。如果禁用了该设置，则不会插入空格。
 :::
-### contextmenu
+##  contextmenu
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
@@ -247,12 +247,12 @@ monaco.editor.create(domElement, {
     },
 });
 ```
-### copyWithSyntaxHighlighting
+##  copyWithSyntaxHighlighting
 + 类型: `boolean` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `可以将编辑器中的文本复制到剪贴板，并保留语法高亮。`
-### cursorBlinking
+##  cursorBlinking
 + 类型: `string` `可选`
 + 默认值: `blink`
 + 可选项: `"blink" | "smooth" | "phase" | "expand" | "solid"`
@@ -272,658 +272,675 @@ monaco.editor.create(domElement, {
 
 :::
 
-### cursorSmoothCaretAnimation
+##  cursorSmoothCaretAnimation
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制光标的平滑动画。如果启用了该设置，光标将以平滑的方式移动。如果禁用了该设置，则光标将以常规方式移动。`
 
-### cursorStyle
+##  cursorStyle
 + 类型: `string` `可选`
 + 默认值: `'line'`
 + 可选项: `'line' | 'block' | 'underline'`
 + 描述: `用于控制光标的样式。可以选择 'line'、'block' 或 'underline' 中的一种。`
 
-### cursorSurroundingLines
+##  cursorSurroundingLines
 + 类型: `number` `可选`
 + 默认值: `0`
 + 可选项: `-`
 + 描述: `用于控制光标周围的行数。如果设置为 0，则不会滚动视图。如果设置为 1，则将滚动视图以确保光标周围的一行可见。如果设置为 2，则将滚动视图以确保光标周围的两行可见，依此类推。`
 
-### cursorSurroundingLinesStyle
+##  cursorSurroundingLinesStyle
 + 类型: `string` `可选`
 + 默认值: `'default'`
 + 可选项: `'default' | 'all'`
 + 描述: `用于控制光标周围行的样式。如果设置为 'default'，则只有当前行的背景色会发生变化。如果设置为 'all'，则所有周围行的背景色都会发生变化。`
 
-### cursorWidth
+##  cursorWidth
 + 类型: `number` `可选`
 + 默认值: `0`
 + 可选项: `-`
 + 描述: `用于控制光标的宽度。如果设置为 0，则使用默认宽度。如果设置为大于 0 的值，则使用指定的宽度。`
 
-### definitionLinkOpensInPeek
+##  definitionLinkOpensInPeek
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制定义链接的行为。如果启用了该设置，单击定义链接将在 Peek 视图中打开定义。如果禁用了该设置，则单击定义链接将在新窗口中打开定义。`
 
-### detectIndentation
+##  detectIndentation
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制编辑器是否应自动检测缩进。如果启用了该设置，编辑器将自动检测缩进，并在新行中使用相同的缩进。如果禁用了该设置，则编辑器将不会自动检测缩进。`
 
 
-### dimension
+##  dimension
 + 类型: `IDimension` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `编辑器的初始尺寸。`
 
-### disableLayerHinting
+##  disableLayerHinting
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否禁用图层提示。如果启用了该设置，编辑器将不会显示图层提示。如果禁用了该设置，则会显示图层提示。`
 
-### disableMonospaceOptimizations
+##  disableMonospaceOptimizations
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否禁用等宽字体优化。如果启用了该设置，编辑器将不会使用等宽字体优化。如果禁用了该设置，则会使用等宽字体优化。`
 
-### domReadOnly
+##  domReadOnly
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否将编辑器设置为只读模式。如果启用了该设置，编辑器将无法编辑。如果禁用了该设置，则可以编辑编辑器。`
 
-### dragAndDrop
+##  dragAndDrop
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用拖放功能。如果启用了该设置，编辑器将支持拖放文件和文本。如果禁用了该设置，则不会支持拖放。`
 
-### dropIntoEditor
+##  dropIntoEditor
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用将文件拖放到编辑器中的功能。如果启用了该设置，编辑器将支持将文件拖放到编辑器中。如果禁用了该设置，则不会支持将文件拖放到编辑器中。`
 
-### emptySelectionClipboard
+##  emptySelectionClipboard
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用空选择剪贴板功能。如果启用了该设置，编辑器将支持将空选择复制到剪贴板中。如果禁用了该设置，则不会支持将空选择复制到剪贴板中。`
 
-### experimentalWhitespaceRendering
+##  experimentalWhitespaceRendering
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用实验性的空格渲染功能。如果启用了该设置，编辑器将使用实验性的空格渲染功能来渲染空格。如果禁用了该设置，则不会使用实验性的空格渲染功能。`
 
-### extraEditorClassName
+##  extraEditorClassName
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制编辑器的额外类名。可以使用该设置来自定义编辑器的样式。`
 
-### fastScrollSensitivity
+##  fastScrollSensitivity
 + 类型: `number` `可选`
 + 默认值: `5`
 + 可选项: `-`
 + 描述: `用于控制快速滚动的灵敏度。如果启用了该设置，编辑器将在快速滚动时更加灵敏。如果禁用了该设置，则在快速滚动时不会更加灵敏。`
 
-### find
+##  find
 + 类型: `Object` `可选`
++ 默认值: `false`
++ 可选项: `-`
++ 描述: `用于控制`
+
+##  fixedOverflowWidgets
++ 类型: `bool` `可选`
 + 默认值: `-`
 + 可选项: `-`
-+ 描述: `用于控制查找和替换功能的行为。`
++ 描述: `用于控制overflowingContentWidgets的现实方式`
 
-### folding
+::: tip 注意
+官方关于hover的演示样式，没有设置这个属性，但是此版本会发现hover的位置不符合预期，查看样式发现官方的是overflowingWidgets，当前版本的是overflowingContentWidgets，参考了[官方的issue](https://github.com/microsoft/monaco-editor/issues/480) 加上此选项才正常
+:::
+
+##  folding
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用代码折叠功能。如果启用了该设置，编辑器将允许折叠代码块。如果禁用了该设置，则不会显示折叠控件。`
 
-### foldingHighlight
+##  foldingHighlight
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否突出显示折叠范围。如果启用了该设置，编辑器将使用颜色装饰器来突出显示折叠范围。如果禁用了该设置，则不会使用颜色装饰器。`
 
-### foldingImportsByDefault
+##  foldingImportsByDefault
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否默认折叠导入语句。如果启用了该设置，编辑器将默认折叠导入语句。如果禁用了该设置，则不会默认折叠导入语句。`
 
-### foldingMaximumRegions
+##  foldingMaximumRegions
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制最大折叠区域数。如果设置为 -1，则没有限制。如果设置为大于 0 的值，则最多允许折叠指定数量的区域。`
 
-### foldingStrategy
+##  foldingStrategy
 + 类型: `string` `可选`
 + 默认值: `'auto'`
 + 可选项: `'auto' | 'indentation'`
 + 描述: `用于控制折叠策略。可以选择 'auto' 或 'indentation' 中的一种。如果选择 'auto'，编辑器将尝试自动检测最佳折叠策略。如果选择 'indentation'，编辑器将使用缩进级别来确定折叠范围。`
 
-### fontFamily
+##  fontFamily
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制编辑器的字体系列。可以设置多个字体系列，以便在第一个不可用时使用备用字体系列。`
 
-### fontLigatures
+##  fontLigatures
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用字体连字。如果启用了该设置，编辑器将使用字体连字来显示代码。如果禁用了该设置，则不会使用字体连字。`
 
-### fontSize
+##  fontSize
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制编辑器的字体大小。可以设置为任何数字值。`
 
-### fontVariations
+##  fontVariations
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制编辑器的字体变体。可以设置多个字体变体，以便在第一个不可用时使用备用字体变体。`
 
-### fontWeight
+##  fontWeight
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制编辑器的字体粗细。可以设置为 'normal'、'bold' 或任何数字值。`
 
-### formatOnPaste
+##  formatOnPaste
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否在粘贴时自动格式化代码。如果启用了该设置，编辑器将在粘贴时自动格式化代码。如果禁用了该设置，则不会在粘贴时自动格式化代码。`
 
-### formatOnType
+##  formatOnType
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否在输入时自动格式化代码。如果启用了该设置，编辑器将在输入时自动格式化代码。如果禁用了该设置，则不会在输入时自动格式化代码。`
 
-### glyphMargin
+##  glyphMargin
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否显示字形边距。如果启用了该设置，编辑器将在左侧显示字形边距。如果禁用了该设置，则不会显示字形边距。`
 
-### gotoLocation
+##  gotoLocation
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制转到定义和查找所有引用的行为。`
 
-### guides
+##  guides
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制代码缩进指南的行为。`
 
-### hideCursorInOverviewRuler
+##  hideCursorInOverviewRuler
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否在概览标尺中隐藏光标。如果启用了该设置，编辑器将在概览标尺中隐藏光标。如果禁用了该设置，则不会在概览标尺中隐藏光标。`
 
-### hover
+##  hover
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制悬停提示的行为。`
 
-### inDiffEditor
+::: tip hover的配置
++ above 默认是 false hover的内容是否一定一直在行的上方
++ delay 默认值是300ms hover延迟出现的时间
++ enabled 默认是true 是否开启
++ sticky  默认值是true 表示hover的内容是否可点击和选择
+:::
+
+##  inDiffEditor
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制编辑器是否在差异编辑器中。如果启用了该设置，编辑器将在差异编辑器中。如果禁用了该设置，则不会在差异编辑器中。`
 
-### inlayHints
+##  inlayHints
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制内联提示的行为。`
 
-### inlineSuggest
+##  inlineSuggest
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制内联建议的行为。`
 
 
-### insertSpaces
+##  insertSpaces
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否使用空格代替制表符。如果启用了该设置，编辑器将使用空格代替制表符。如果禁用了该设置，则使用制表符。`
 
-### language
+##  language
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置编辑器的语言。可以设置为任何支持的语言。`
 
-### largeFileOptimizations
+##  largeFileOptimizations
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用大文件优化。如果启用了该设置，编辑器将在处理大文件时进行优化。如果禁用了该设置，则不会进行优化。`
 
-### letterSpacing
+##  letterSpacing
 + 类型: `number` `可选`
 + 默认值: `0`
 + 可选项: `-`
 + 描述: `用于控制编辑器的字母间距。可以设置为任何数字值。`
 
-### lightbulb
+##  lightbulb
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制灯泡提示的行为。`
 
-### lineDecorationsWidth
+##  lineDecorationsWidth
 + 类型: `number` `可选`
 + 默认值: `1`
 + 可选项: `-`
 + 描述: `用于控制行装饰器的宽度。可以设置为任何数字值。`
 
-### lineHeight
+##  lineHeight
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制编辑器的行高。可以设置为任何数字值。`
 
-### lineNumbers
+##  lineNumbers
 + 类型: `string` `可选`
 + 默认值: `'on'`
 + 可选项: `'on' | 'off' | 'relative' | 'interval' | 'intervalRelative'`
 + 描述: `用于控制行号的显示方式。可以选择 'on'、'off'、'relative'、'interval' 或 'intervalRelative' 中的一种。`
 
-### lineNumbersMinChars
+##  lineNumbersMinChars
 + 类型: `number` `可选`
 + 默认值: `5`
 + 可选项: `-`
 + 描述: `用于控制行号的最小字符数。可以设置为任何数字值。`
 
-### linkedEditing
+##  linkedEditing
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用链接编辑。如果启用了该设置，编辑器将在重命名符号时自动更新所有相关符号。如果禁用了该设置，则不会自动更新相关符号。`
 
-### links
+##  links
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用链接。如果启用了该设置，编辑器将在代码中检测链接，并将其呈现为可单击的链接。如果禁用了该设置，则不会检测链接。`
 
-### matchBrackets
+##  matchBrackets
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否突出显示匹配的括号。如果启用了该设置，编辑器将使用颜色装饰器来突出显示匹配的括号。如果禁用了该设置，则不会使用颜色装饰器。`
 
 
-### matchOnWordStartOnly
+##  matchOnWordStartOnly
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否仅在单词开头匹配。如果启用了该设置，编辑器将仅在单词开头匹配。如果禁用了该设置，则在单词中的任何位置都可以匹配。`
 
-### maxTokenizationLineLength
+##  maxTokenizationLineLength
 + 类型: `number` `可选`
 + 默认值: `20000`
 + 可选项: `-`
 + 描述: `用于控制最大标记化行长度。可以设置为任何数字值。`
 
-### minimap
+##  minimap
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制缩略图的行为。`
 
-### model
+##  model
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置编辑器的模型。`
 
-### mouseStyle
+##  mouseStyle
 + 类型: `string` `可选`
 + 默认值: `'text'`
 + 可选项: `'text' | 'default' | 'copy'`
 + 描述: `用于控制鼠标样式。可以选择 'text'、'default' 或 'copy' 中的一种。`
 
-### mouseWheelScrollSensitivity
+##  mouseWheelScrollSensitivity
 + 类型: `number` `可选`
 + 默认值: `1`
 + 可选项: `-`
 + 描述: `用于控制鼠标滚轮滚动的灵敏度。可以设置为任何数字值。`
 
-### mouseWheelZoom
+##  mouseWheelZoom
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用鼠标滚轮缩放。如果启用了该设置，编辑器将在使用鼠标滚轮时缩放。如果禁用了该设置，则不会缩放。`
 
-### multiCursorLimit
+##  multiCursorLimit
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制多光标的最大数量。可以设置为任何数字值。`
 
-### multiCursorMergeOverlapping
+##  multiCursorMergeOverlapping
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否合并重叠的多光标。如果启用了该设置，编辑器将合并重叠的多光标。如果禁用了该设置，则不会合并重叠的多光标。`
 
-### multiCursorModifier
+##  multiCursorModifier
 + 类型: `string` `可选`
 + 默认值: `'alt'`
 + 可选项: `'alt' | 'ctrl' | 'meta'`
 + 描述: `用于控制多光标的修改键。可以选择 'alt'、'ctrl' 或 'meta' 中的一种。`
 
-### multiCursorPaste
+##  multiCursorPaste
 + 类型: `string` `可选`
 + 默认值: `'spread'`
 + 可选项: `'spread' | 'full'`
 + 描述: `用于控制多光标粘贴的行为。可以选择 'spread' 或 'full' 中的一种。`
 
-### occurrencesHighlight
+##  occurrencesHighlight
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否突出显示所有出现。如果启用了该设置，编辑器将使用颜色装饰器来突出显示所有出现。如果禁用了该设置，则不会使用颜色装饰器。`
 
-### overflowWidgetsDomNode
+##  overflowWidgetsDomNode
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置溢出小部件的 DOM 节点。`
 
-### overviewRulerBorder
+##  overviewRulerBorder
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否在概览标尺周围绘制边框。如果启用了该设置，编辑器将在概览标尺周围绘制边框。如果禁用了该设置，则不会绘制边框。`
 
-### overviewRulerLanes
+##  overviewRulerLanes
 + 类型: `number` `可选`
 + 默认值: `3`
 + 可选项: `-`
 + 描述: `用于控制概览标尺的宽度。可以设置为任何数字值。`
 
-### padding
+##  padding
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置编辑器的填充。`
 
-### parameterHints
+##  parameterHints
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于控制参数提示的行为。`
 
-### peekWidgetDefaultFocus
+##  peekWidgetDefaultFocus
 + 类型: `string` `可选`
 + 默认值: `'editor'`
 + 可选项: `'editor' | 'tree'`
 + 描述: `用于控制查看小部件的默认焦点。可以选择 'editor' 或 'tree' 中的一种。`
 
-### quickSuggestions
+##  quickSuggestions
 + 类型: `Object` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制快速建议的行为。`
 
-### quickSuggestionsDelay
+##  quickSuggestionsDelay
 + 类型: `number` `可选`
 + 默认值: `10`
 + 可选项: `-`
 + 描述: `用于控制快速建议的延迟时间。可以设置为任何数字值。`
 
-### readOnly
+##  readOnly
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制编辑器是否为只读。如果启用了该设置，编辑器将为只读。如果禁用了该设置，则可以编辑。`
 
-### renameOnType
+##  renameOnType
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否在输入时自动重命名符号。如果启用了该设置，编辑器将在输入时自动重命名符号。如果禁用了该设置，则不会自动重命名符号。`
 
-### renderControlCharacters
+##  renderControlCharacters
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否呈现控制字符。如果启用了该设置，编辑器将呈现控制字符。如果禁用了该设置，则不会呈现控制字符。`
 
-### renderFinalNewline
+##  renderFinalNewline
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否呈现最终换行符。如果启用了该设置，编辑器将呈现最终换行符。如果禁用了该设置，则不会呈现最终换行符。`
 
-### renderLineHighlight
+##  renderLineHighlight
 + 类型: `string` `可选`
 + 默认值: `'line'`
 + 可选项: `'none' | 'gutter' | 'line' | 'all'`
 + 描述: `用于控制行高亮的行为。可以选择 'none'、'gutter'、'line' 或 'all' 中的一种。`
 
-### renderLineHighlightOnlyWhenFocus
+##  renderLineHighlightOnlyWhenFocus
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否仅在编辑器获得焦点时才突出显示行。如果启用了该设置，编辑器将仅在获得焦点时突出显示行。如果禁用了该设置，则始终突出显示行。`
 
-### renderValidationDecorations
+##  renderValidationDecorations
 + 类型: `string` `可选`
 + 默认值: `'on'`
 + 可选项: `'on' | 'off' | 'editable'`
 + 描述: `用于控制验证装饰的行为。可以选择 'on'、'off' 或 'editable' 中的一种。`
 
-### renderWhitespace
+##  renderWhitespace
 + 类型: `string` `可选`
 + 默认值: `'none'`
 + 可选项: `'none' | 'boundary' | 'all'`
 + 描述: `用于控制空格的呈现方式。可以选择 'none'、'boundary' 或 'all' 中的一种。`
 
-### revealHorizontalRightPadding
+##  revealHorizontalRightPadding
 + 类型: `number` `可选`
 + 默认值: `0`
 + 可选项: `-`
 + 描述: `用于控制水平滚动时的右侧填充。可以设置为任何数字值。`
 
-### roundedSelection
+##  roundedSelection
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否使用圆角选择。如果启用了该设置，编辑器将使用圆角选择。如果禁用了该设置，则不会使用圆角选择。`
 
-### rulers
+##  rulers
 + 类型: `Array` `可选`
 + 默认值: `[]`
 + 可选项: `-`
 + 描述: `用于控制标尺的行为。`
 
-### screenReaderAnnounceInlineSuggestion
+##  screenReaderAnnounceInlineSuggestion
 + 类型: `string` `可选`
 + 默认值: `'off'`
 + 可选项: `'off' | 'on' | 'auto'`
 + 描述: `用于控制屏幕阅读器是否应该在内联建议上进行注释。可以选择 'off'、'on' 或 'auto' 中的一种。`
 
-### scrollBeyondLastColumn
+##  scrollBeyondLastColumn
 + 类型: `number` `可选`
 + 默认值: `5`
 + 可选项: `-`
 + 描述: `用于控制水平滚动时的额外滚动量。可以设置为任何数字值。`
 
-### scrollBeyondLastLine
+##  scrollBeyondLastLine
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否允许滚动超过最后一行。如果启用了该设置，编辑器将允许滚动超过最后一行。如果禁用了该设置，则不会滚动超过最后一行。`
 
-### scrollPredominantAxis
+##  scrollPredominantAxis
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否优先滚动主轴。如果启用了该设置，编辑器将优先滚动主轴。如果禁用了该设置，则不会优先滚动主轴。`
 
-### scrollbar
+##  scrollbar
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置滚动条的行为。`
 
-### selectOnLineNumbers
+##  selectOnLineNumbers
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否在单击行号时选择整行。如果启用了该设置，编辑器将在单击行号时选择整行。如果禁用了该设置，则不会选择整行。`
 
-### selectionClipboard
+##  selectionClipboard
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否将选择复制到剪贴板。如果启用了该设置，编辑器将将选择复制到剪贴板。如果禁用了该设置，则不会将选择复制到剪贴板。`
 
-### selectionHighlight
+##  selectionHighlight
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否突出显示选定文本。如果启用了该设置，编辑器将突出显示选定文本。如果禁用了该设置，则不会突出显示选定文本。`
 
-### semanticHighlighting.enabled
+##  semanticHighlighting.enabled
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用语义突出显示。如果启用了该设置，编辑器将使用语义信息来突出显示代码中的特定文本，例如变量、函数等。如果禁用了该设置，则不会使用语义信息。`
 
-### showDeprecated
+##  showDeprecated
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否显示已弃用的代码。如果启用了该设置，编辑器将显示已弃用的代码。如果禁用了该设置，则不会显示已弃用的代码。`
 
-### showFoldingControls
+##  showFoldingControls
 + 类型: `string` `可选`
 + 默认值: `'mouseover'`
 + 可选项: `'always' | 'mouseover'`
 + 描述: `用于控制折叠控件的显示方式。可以选择 'always' 或 'mouseover' 中的一种。`
 
-### showUnused
+##  showUnused
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否显示未使用的代码。如果启用了该设置，编辑器将显示未使用的代码。如果禁用了该设置，则不会显示未使用的代码。`
 
-### smartSelect
+##  smartSelect
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用智能选择。如果启用了该设置，编辑器将使用智能算法来选择文本。如果禁用了该设置，则不会使用智能算法。`
 
-### smoothScrolling
+##  smoothScrolling
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用平滑滚动。如果启用了该设置，编辑器将使用平滑滚动。如果禁用了该设置，则不会使用平滑滚动。`
 
-### snippetSuggestions
+##  snippetSuggestions
 + 类型: `string` `可选`
 + 默认值: `'inline'`
 + 可选项: `'top' | 'bottom' | 'inline' | 'none'`
 + 描述: `用于控制代码段建议的显示位置。可以选择 'top'、'bottom'、'inline' 或 'none' 中的一种。`
 
-### stablePeek
+##  stablePeek
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否在查看定义时保持查看窗口打开。如果启用了该设置，编辑器将在查看定义时保持查看窗口打开。如果禁用了该设置，则不会保持查看窗口打开。`
 
-### stickyScroll
+##  stickyScroll
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用粘性滚动。如果启用了该设置，编辑器将使用粘性滚动。如果禁用了该设置，则不会使用粘性滚动。`
 
-### stickyTabStops
+##  stickyTabStops
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否启用粘性制表符。如果启用了该设置，编辑器将使用粘性制表符。如果禁用了该设置，则不会使用粘性制表符。`
 
-### stopRenderingLineAfter
+##  stopRenderingLineAfter
 + 类型: `number` `可选`
 + 默认值: `10000`
 + 可选项: `-`
 + 描述: `用于控制编辑器停止呈现行的数量。可以设置为任何数字值。`
 
-### suggest
+##  suggest
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置建议的行为。`
 
-### suggestFontSize
+##  suggestFontSize
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置建议的字体大小。可以设置为任何数字值。`
 
-### suggestLineHeight
+##  suggestLineHeight
 + 类型: `number` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置建议的行高。可以设置为任何数字值。`
 
-### suggestOnTriggerCharacters
+##  suggestOnTriggerCharacters
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否在输入触发字符时显示建议。如果启用了该设置，编辑器将在输入触发字符时显示建议。如果禁用了该设置，则不会在输入触发字符时显示建议。`
 
-### suggestSelection
+##  suggestSelection
 + 类型: `string` `可选`
 + 默认值: `'recentlyUsed'`
 + 可选项: `'first' | 'recentlyUsed' | 'recentlyUsedByPrefix'`
 + 描述: `用于控制建议列表中的默认选择。可以选择 'first'、'recentlyUsed' 或 'recentlyUsedByPrefix' 中的一种。`
 
-### tabCompletion
+##  tabCompletion
 + 类型: `string` `可选`
 + 默认值: `'off'`
 + 可选项: `'on' | 'off' | 'onlySnippets'`
 + 描述: `用于控制制表符完成的行为。可以选择 'on'、'off' 或 'onlySnippets' 中的一种。`
 
-### tabFocusMode
+##  tabFocusMode
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否启用制表符焦点模式。如果启用了该设置，编辑器将使用制表符焦点模式。如果禁用了该设置，则不会使用制表符焦点模式。`
 
-### tabIndex
+##  tabIndex
 + 类型: `number` `可选`
 + 默认值: `0`
 + 可选项: `-`
 + 描述: `用于设置编辑器的制表符索引。可以设置为任何数字值。`
 
-### tabSize
+##  tabSize
 + 类型: `number` `可选`
 + 默认值: `4`
 + 可选项: `-`
@@ -941,79 +958,79 @@ var editor = monaco.editor.create(document.getElementById('container'), {
 ```
 在上面的代码中，我们使用`tabSize`属性设置tab键的大小为2个空格，使用`insertSpaces`属性设置是否使用空格代替制表符。你可以根据需要调整这些属性的值。
 
-### theme
+##  theme
 + 类型: `string` `可选`
 + 默认值: `'vs'`
 + 可选项: `"vs" | "vs-dark" | "hc-black" | "hc-light"`
 + 描述: `用于设置编辑器的主题。可以选择任何可用的主题。`
 
-### trimAutoWhitespace
+##  trimAutoWhitespace
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否自动删除行末空格。如果启用了该设置，编辑器将自动删除行末空格。如果禁用了该设置，则不会自动删除行末空格。`
 
-### unfoldOnClickAfterEndOfLine
+##  unfoldOnClickAfterEndOfLine
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否在行末单击时展开代码。如果启用了该设置，编辑器将在行末单击时展开代码。如果禁用了该设置，则不会在行末单击时展开代码。`
 
-### unicodeHighlight
+##  unicodeHighlight
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否突出显示 Unicode 字符。如果启用了该设置，编辑器将突出显示 Unicode 字符。如果禁用了该设置，则不会突出显示 Unicode 字符。`
 
-### unusualLineTerminators
+##  unusualLineTerminators
 + 类型: `string` `可选`
 + 默认值: `'prompt'`
 + 可选项: `'off' | 'prompt' | 'auto'`
 + 描述: `用于控制是否在文件中检测到非常规行终止符时显示警告。可以选择 'off'、'prompt' 或 'auto' 中的一种。`
 
-### useShadowDOM
+##  useShadowDOM
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否使用 Shadow DOM。如果启用了该设置，编辑器将使用 Shadow DOM。如果禁用了该设置，则不会使用 Shadow DOM。`
 
-### useTabStops
+##  useTabStops
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否使用制表符停止。如果启用了该设置，编辑器将使用制表符停止。如果禁用了该设置，则不会使用制表符停止。`
 
-### value
+##  value
 + 类型: `string` `可选`
 + 默认值: `''`
 + 可选项: `-`
 + 描述: `用于设置编辑器的初始值。可以设置为任何字符串值。`
 
-### wordBasedSuggestions
+##  wordBasedSuggestions
 + 类型: `boolean` `可选`
 + 默认值: `true`
 + 可选项: `-`
 + 描述: `用于控制是否基于单词提供建议。如果启用了该设置，编辑器将基于单词提供建议。如果禁用了该设置，则不会基于单词提供建议。`
 
-### wordBasedSuggestionsOnlySameLanguage
+##  wordBasedSuggestionsOnlySameLanguage
 + 类型: `boolean` `可选`
 + 默认值: `false`
 + 可选项: `-`
 + 描述: `用于控制是否仅在同一语言中提供基于单词的建议。如果启用了该设置，编辑器将仅在同一语言中提供基于单词的建议。如果禁用了该设置，则不会仅在同一语言中提供基于单词的建议。`
 
-### wordBreak
+##  wordBreak
 + 类型: `string` `可选`
 + 默认值: `'default'`
 + 可选项: `'default' | 'none' | 'camelCase' | 'hyphenated'`
 + 描述: `用于控制单词如何断开。可以选择 'default'、'none'、'camelCase' 或 'hyphenated' 中的一种。`
 
-### wordSeparators
+##  wordSeparators
 + 类型: `string` `可选`
 + 默认值: `'~!@#+%^&*()-=+[{]}\|;:\'",.<>/?'`
 + 可选项: `-`
 + 描述: `用于设置单词分隔符。可以设置为任何字符串值。`
 
-### wordWrap
+##  wordWrap
 + 类型: `string` `可选`
 + 默认值: `'off'`
 + 可选项: `'off' | 'on' | 'wordWrapColumn' | 'bounded'`
@@ -1036,43 +1053,43 @@ codeconst editor = monaco.editor.create(document.getElementById("container"), {
 您可以根据需要调整 `wordWrapColum`选项的值来设置单行最大长度。
 
 
-### wordWrapBreakAfterCharacters
+##  wordWrapBreakAfterCharacters
 + 类型: `string` `可选`
 + 默认值: `' \t})]?|&,;'``
 + 可选项: `-`
 + 描述: `用于设置单词换行后的字符。可以设置为任何字符串值。`
 
-### wordWrapBreakBeforeCharacters
+##  wordWrapBreakBeforeCharacters
 + 类型: `string` `可选`
 + 默认值: `'([{<'``
 + 可选项: `-`
 + 描述: `用于设置单词换行前的字符。可以设置为任何字符串值。`
 
-### wordWrapColumn
+##  wordWrapColumn
 + 类型: `number` `可选`
 + 默认值: `80`
 + 可选项: `-`
 + 描述: `用于设置文本的换行列。可以设置为任何数字值。`
 
-### wordWrapOverride1
+##  wordWrapOverride1
 + 类型: `Function` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置文本的自定义换行逻辑。可以设置为任何函数。`
 
-### wordWrapOverride2
+##  wordWrapOverride2
 + 类型: `Function` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于设置文本的自定义换行逻辑。可以设置为任何函数。`
 
-### wrappingIndent
+##  wrappingIndent
 + 类型: `string` `可选`
 + 默认值: `'none'`
 + 可选项: `'none' | 'same' | 'indent'`
 + 描述: `用于控制换行后的缩进。可以选择 'none'、'same' 或 'indent' 中的一种。`
 
-### wrappingStrategy
+##  wrappingStrategy
 + 类型: `string` `可选`
 + 默认值: `'simple'`
 + 可选项: `'simple' | 'advanced'`
