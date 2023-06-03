@@ -2,7 +2,7 @@
 
 ## 事件
 
-### onContextMenu
+##  onContextMenu
 + 参数: `monaco.editor.IEditorMouseEvent`
 + 描述: `用户右键点击编辑器时触发。可以通过监听这个事件来实现自定义的右键菜单`
 + 示例: 
@@ -25,7 +25,7 @@ editor.onContextMenu((e: monaco.editor.IEditorMouseEvent) => {
     e.event.preventDefault();
 });
 ```
-### onDidAttemptReadOnlyEdit
+##  onDidAttemptReadOnlyEdit
 + 参数: `monaco.editor.IReadOnlyEditAttemptEvent`
 + 描述: `在用户试图编辑只读文本时触发。可以通过监听这个事件来实现自定义的只读文本处理逻辑。`
 + 示例:
@@ -48,7 +48,7 @@ onDidAttemptReadOnlyEdit
 e.preventDefault()
  方法。
 
-### onDidBlurEditorText
+##  onDidBlurEditorText
 + 参数: 无
 + 描述: 在编辑器失去焦点时触发。可以通过监听这个事件来实现自定义的失焦处理逻辑。
 + 示例:
@@ -66,7 +66,7 @@ editor.onDidBlurEditorText(() => {
 onDidBlurEditorText
  事件。当编辑器失去焦点时，会在控制台输出相关信息。
 
-### onDidBlurEditorWidget
+##  onDidBlurEditorWidget
 + 参数: 无
 + 描述: 在编辑器小部件失去焦点时触发。可以通过监听这个事件来实现自定义的失焦处理逻辑。
 + 示例:
@@ -84,7 +84,7 @@ editor.onDidBlurEditorWidget(() => {
 onDidBlurEditorWidget
  事件。当编辑器小部件失去焦点时，会在控制台输出相关信息。
 
-### onDidChangeConfiguration
+##  onDidChangeConfiguration
 + 参数: 无
 + 描述: 在编辑器配置发生变化时触发。可以通过监听这个事件来实现自定义的配置处理逻辑。
 + 示例:
@@ -102,7 +102,7 @@ editor.onDidChangeConfiguration(() => {
 onDidChangeConfiguration
  事件。当编辑器配置发生变化时，会在控制台输出相关信息。
 
-### onDidChangeCursorPosition
+##  onDidChangeCursorPosition
 + 参数: `monaco.editor.ICursorPositionChangedEvent`
 + 描述: 在光标位置发生变化时触发。可以通过监听这个事件来实现自定义的光标位置处理逻辑。
 + 示例:
@@ -120,7 +120,7 @@ editor.onDidChangeCursorPosition((e: monaco.editor.ICursorPositionChangedEvent) 
 onDidChangeCursorPosition
  事件。当光标位置发生变化时，会在控制台输出相关信息。
 
- ### onDidChangeCursorSelection
+ ##  onDidChangeCursorSelection
 + 参数: `monaco.editor.ICursorSelectionChangedEvent`
 + 描述: `在光标选择发生变化时触发。可以通过监听这个事件来实现自定义的光标选择处理逻辑。`
 + 示例:
@@ -138,7 +138,7 @@ editor.onDidChangeCursorSelection((e: monaco.editor.ICursorSelectionChangedEvent
 onDidChangeCursorSelection
  事件。当光标选择发生变化时，会在控制台输出相关信息。
 
-### onDidChangeHiddenAreas
+##  onDidChangeHiddenAreas
 + 参数: `无`
 + 描述: `在编辑器的隐藏区域发生变化时触发。可以通过监听这个事件来实现自定义的隐藏区域处理逻辑。`
 + 示例:
@@ -156,7 +156,7 @@ editor.onDidChangeHiddenAreas(() => {
 onDidChangeHiddenAreas
  事件。当编辑器的隐藏区域发生变化时，会在控制台输出相关信息。
 
-### onDidChangeModel
+##  onDidChangeModel
 + 参数: `monaco.editor.IModelChangedEvent`
 + 描述: `在编辑器的模型发生变化时触发。可以通过监听这个事件来实现自定义的模型处理逻辑。`
 + 示例:
@@ -174,7 +174,7 @@ editor.onDidChangeModel((e: monaco.editor.IModelChangedEvent) => {
 onDidChangeModel
  事件。当编辑器的模型发生变化时，会在控制台输出相关信息。
 
-### onDidChangeModelContent
+##  onDidChangeModelContent
 + 参数: `monaco.editor.IModelContentChangedEvent`
 + 描述: `在编辑器的模型内容发生变化时触发。可以通过监听这个事件来实现自定义的模型内容处理逻辑。`
 + 示例:
@@ -190,7 +190,7 @@ editor.onDidChangeModelContent((e: monaco.editor.IModelContentChangedEvent) => {
 ```
 在这个示例中，我们创建了一个编辑器，并监听了它的 onDidChangeModelContent事件。当编辑器的模型内容发生变化时，会在控制台输出相关信息。
 
-### onDidChangeModelDecorations
+##  onDidChangeModelDecorations
 + 参数: `monaco.editor.IModelDecorationsChangedEvent`
 + 描述: `在编辑器的模型装饰发生变化时触发。可以通过监听这个事件来实现自定义的模型装饰处理逻辑。`
 + 示例:
@@ -218,7 +218,7 @@ editor.onDidChangeModelDecorations((e: monaco.editor.IModelDecorationsChangedEve
 onDidChangeModelDecorations
  事件。当编辑器的模型装饰发生变化时，会在控制台输出相关信息。
 
-### onDidChangeModelLanguage
+##  onDidChangeModelLanguage
 + 参数: `无`
 + 描述: `在编辑器的模型语言发生变化时触发。可以通过监听这个事件来实现自定义的模型语言处理逻辑。`
 + 示例:
@@ -236,7 +236,7 @@ editor.onDidChangeModelLanguage(() => {
 onDidChangeModelLanguage
  事件。当编辑器的模型语言发生变化时，会在控制台输出相关信息。
 
-### onDidChangeModelLanguageConfiguration
+##  onDidChangeModelLanguageConfiguration
 + 参数: `无`
 + 描述: `在编辑器的模型语言配置发生变化时触发。可以通过监听这个事件来实现自定义的模型语言配置处理逻辑。`
 + 示例:
@@ -254,7 +254,7 @@ editor.onDidChangeModelLanguageConfiguration(() => {
 onDidChangeModelLanguageConfiguration
  事件。当编辑器的模型语言配置发生变化时，会在控制台输出相关信息。
 
-### onDidChangeModelOptions
+##  onDidChangeModelOptions
 + 参数: `无`
 + 描述: `在编辑器的模型选项发生变化时触发。可以通过监听这个事件来实现自定义的模型选项处理逻辑。`
 + 示例:
@@ -272,7 +272,7 @@ editor.onDidChangeModelOptions(() => {
 onDidChangeModelOptions
  事件。当编辑器的模型选项发生变化时，会在控制台输出相关信息。
 
-### onDidCompositionEnd
+##  onDidCompositionEnd
 + 参数: `void`
 + 描述: `在输入法组合结束时触发。可以通过监听这个事件来实现自定义的输入法组合处理逻辑。`
 + 示例:
@@ -290,7 +290,7 @@ editor.onDidCompositionEnd(() => {
 onDidCompositionEnd
  事件。当输入法组合结束时，会在控制台输出相关信息。
 
-### onDidCompositionStart
+##  onDidCompositionStart
 + 参数: `void`
 + 描述: `在输入法组合开始时触发。可以通过监听这个事件来实现自定义的输入法组合处理逻辑。`
 + 示例:
@@ -308,7 +308,7 @@ editor.onDidCompositionStart(() => {
 onDidCompositionStart
  事件。当输入法组合开始时，会在控制台输出相关信息。
 
-### onDidContentSizeChange
+##  onDidContentSizeChange
 + 参数: `monaco.editor.IContentSizeChangedEvent`
 + 描述: `在编辑器的内容大小发生变化时触发。可以通过监听这个事件来实现自定义的内容大小处理逻辑。`
 + 示例:
@@ -326,7 +326,7 @@ editor.onDidContentSizeChange((e: monaco.editor.IContentSizeChangedEvent) => {
 onDidContentSizeChange
  事件。当编辑器的内容大小发生变化时，会在控制台输出相关信息。
 
-### onDidFocusEditorText
+##  onDidFocusEditorText
 + 参数: `void`
 + 描述: `在编辑器文本区域获得焦点时触发。可以通过监听这个事件来实现自定义的文本区域焦点处理逻辑。`
 + 示例:
@@ -344,7 +344,7 @@ editor.onDidFocusEditorText(() => {
 onDidFocusEditorText
  事件。当编辑器文本区域获得焦点时，会在控制台输出相关信息。
 
-### onDidFocusEditorWidget
+##  onDidFocusEditorWidget
 + 参数: `void`
 + 描述: `在编辑器小部件获得焦点时触发。可以通过监听这个事件来实现自定义的小部件焦点处理逻辑。`
 + 示例:
@@ -362,7 +362,7 @@ editor.onDidFocusEditorWidget(() => {
 onDidFocusEditorWidget
  事件。当编辑器小部件获得焦点时，会在控制台输出相关信息。
 
- ### onDidLayoutChange
+ ##  onDidLayoutChange
 + 参数: `monaco.editor.EditorLayoutInfo`
 + 描述: `在编辑器的布局信息发生变化时触发。可以通过监听这个事件来实现自定义的布局处理逻辑。`
 + 示例:
@@ -380,7 +380,7 @@ editor.onDidLayoutChange((layoutInfo: monaco.editor.EditorLayoutInfo) => {
 onDidLayoutChange
  事件。当编辑器的布局信息发生变化时，会在控制台输出相关信息。
 
-### onDidPaste
+##  onDidPaste
 + 参数: `string`
 + 描述: `在编辑器中粘贴文本时触发。可以通过监听这个事件来实现自定义的粘贴文本处理逻辑。`
 + 示例:
@@ -398,7 +398,7 @@ editor.onDidPaste((text: string) => {
 onDidPaste
  事件。当在编辑器中粘贴文本时，会在控制台输出相关信息。
 
-### onDidScrollChange
+##  onDidScrollChange
 + 参数: `monaco.editor.IScrollEvent`
 + 描述: `在编辑器的滚动位置发生变化时触发。可以通过监听这个事件来实现自定义的滚动处理逻辑。`
 + 示例:
@@ -416,7 +416,7 @@ editor.onDidScrollChange((e: monaco.editor.IScrollEvent) => {
 onDidScrollChange
  事件。当编辑器的滚动位置发生变化时，会在控制台输出相关信息。
 
-### onKeyDown
+##  onKeyDown
 + 参数: `monaco.IKeyboardEvent`
 + 描述: `在编辑器中按下键盘按键时触发。可以通过监听这个事件来实现自定义的键盘按键处理逻辑。`
 + 示例:
@@ -434,7 +434,7 @@ editor.onKeyDown((e: monaco.IKeyboardEvent) => {
 onKeyDown
  事件。当在编辑器中按下键盘按键时，会在控制台输出相关信息。
 
-### onKeyUp
+##  onKeyUp
 + 参数: `monaco.IKeyboardEvent`
 + 描述: `在编辑器中释放键盘按键时触发。可以通过监听这个事件来实现自定义的键盘按键处理逻辑。`
 + 示例:
@@ -452,7 +452,7 @@ editor.onKeyUp((e: monaco.IKeyboardEvent) => {
 onKeyUp
  事件。当在编辑器中释放键盘按键时，会在控制台输出相关信息。
 
- ### onMouseDown
+ ##  onMouseDown
 + 参数: `monaco.editor.IEditorMouseEvent`
 + 描述: `在编辑器中按下鼠标按钮时触发。可以通过监听这个事件来实现自定义的鼠标按键处理逻辑。`
 + 示例:
@@ -470,7 +470,7 @@ editor.onMouseDown((e: monaco.editor.IEditorMouseEvent) => {
 onMouseDown
  事件。当在编辑器中按下鼠标按钮时，会在控制台输出相关信息。
 
-### onMouseLeave
+##  onMouseLeave
 + 参数: `monaco.editor.IEditorMouseEvent`
 + 描述: `在鼠标离开编辑器时触发。可以通过监听这个事件来实现自定义的鼠标离开处理逻辑。`
 + 示例:
@@ -488,7 +488,7 @@ editor.onMouseLeave((e: monaco.editor.IEditorMouseEvent) => {
 onMouseLeave
  事件。当鼠标离开编辑器时，会在控制台输出相关信息。
 
-### onMouseMove
+##  onMouseMove
 + 参数: `monaco.editor.IEditorMouseEvent`
 + 描述: `在鼠标在编辑器中移动时触发。可以通过监听这个事件来实现自定义的鼠标移动处理逻辑。`
 + 示例:
@@ -506,7 +506,7 @@ editor.onMouseMove((e: monaco.editor.IEditorMouseEvent) => {
 onMouseMove
  事件。当鼠标在编辑器中移动时，会在控制台输出相关信息。
 
-### onMouseUp
+##  onMouseUp
 + 参数: `monaco.editor.IEditorMouseEvent`
 + 描述: `在编辑器中释放鼠标按钮时触发。可以通过监听这个事件来实现自定义的鼠标按键处理逻辑。`
 + 示例:
@@ -526,7 +526,7 @@ onMouseUp
 
 ## 方法
 
-### addAction
+##  addAction
 + 语法: `addAction(descriptor: monaco.editor.IActionDescriptor): IDisposable;`
 + 参数: `monaco.editor.IActionDescriptor`
 + 返回值: `IDisposable对象`
@@ -569,7 +569,7 @@ editor.addAction({
 ```
 在这个示例中，我们创建了一个编辑器，并向它添加了一个名为 my-custom-action的自定义操作。这个操作的显示名称为 My Custom Action，快捷键为 Ctrl/Cmd + S，在右键菜单中的分组 ID 为 navigation，排序位置为 1.5。当这个操作被执行时，会在控制台输出相关信息。
 
-### addCommand
+##  addCommand
 + 语法: `addCommand(keybinding: monaco.IKeybinding, handler: ICommandHandler, context: string):string`
 + 参数: `keybinding`、`handler`、`context`
 + 返回值: `IDisposable对象`
@@ -599,7 +599,7 @@ editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S, function(ed) {
 ```
 在这个示例中，我们创建了一个编辑器，并向它添加了一个名为 Custom command的自定义命令。这个命令的快捷键为 Ctrl/Cmd + S，当这个命令被执行时，会在控制台输出相关信息。
 
-### addContentWidget
+##  addContentWidget
 + 语法: `addContentWidget(widget: IContentWidget): void`
 + 参数: `widget`
 + 返回值: `-`
@@ -644,7 +644,7 @@ editor.addContentWidget(widget);
 ```
 在这个示例中，我们创建了一个编辑器，并向它添加了一个名为 my-content-widget的自定义内容小部件。这个小部件的 DOM 节点为一个包含文本My content widget的div元素，位置信息为第一行第一列的上方或下方。当这个小部件被添加到编辑器中时，会显示在相应的位置。
 
-### addOverlayWidget
+##  addOverlayWidget
 + 语法: `addOverlayWidget(widget: IOverlayWidget): void`
 + 参数: `widget`
 + 返回值: `-`
@@ -685,7 +685,7 @@ editor.addOverlayWidget(widget);
 ```
 在这个示例中，我们创建了一个编辑器，并向它添加了一个名为 my-overlay-widget 的自定义覆盖小部件。这个小部件的 DOM 节点为一个包含文本 My overlay widget 的 div 元素，位置信息为右上角。当这个小部件被添加到编辑器中时，会显示在相应的位置。
 
-### applyFontInfo
+##  applyFontInfo
 + 语法: `applyFontInfo(target: HTMLElement): void`
 + 参数: `target`
 + 返回值: `-`
@@ -704,7 +704,7 @@ editor.applyFontInfo(target);
 ```
 在这个示例中，我们创建了一个编辑器，并将它的字体信息应用到了一个名为 target 的 DOM 元素上。这个元素的字体、字号、行高等信息会与编辑器保持一致。
 
-### changeViewZones
+##  changeViewZones
 + 语法: `changeViewZones(callback: (accessor: IViewZoneChangeAccessor) => void): void`
 + 参数: `callback`
 + 返回值: `-`
@@ -732,7 +732,7 @@ editor.changeViewZones(function(changeAccessor) {
 ```
 在这个示例中，我们创建了一个编辑器，并使用 changeViewZones 方法添加了一个视图区域。这个视图区域的 DOM 节点为一个包含文本 My view zone 的 div 元素，位置信息为第三行之后，高度为两行。当这个视图区域被添加到编辑器中时，会显示在相应的位置。
 
-### createContextKey
+##  createContextKey
 + 语法: `createContextKey(key: string, defaultValue: any): IContextKey`
 + 参数: `key, defaultValue`
 + 返回值: `IContextKey`
@@ -752,7 +752,7 @@ console.log(myContextKey.get()); // 输出 'default'
 ```
 在这个示例中，我们创建了一个编辑器，并使用 createContextKey 方法创建了一个名为 myContextKey 的上下文键，它的默认值为 'default'。我们通过调用 get 方法来获取当前上下文键的值，输出结果为 'default'。
 
-### createDecorationsCollection
+##  createDecorationsCollection
 + 语法: `createDecorationsCollection(ownerId: number): IDecorationsController`
 + 参数: `ownerId`
 + 返回值: `IDecorationsController`
@@ -774,7 +774,7 @@ editor.deltaDecorations([], decorations.getDecorations());
 ```
 在这个示例中，我们创建了一个编辑器，并使用 createDecorationsCollection 方法创建了一个 ownerId 为 1 的装饰器集合。我们通过调用 createDecoration 方法来创建一个装饰器，它的位置为第一行第一列，样式为整行高亮，类名为 my-decoration。最后，我们通过调用 deltaDecorations 方法来将这个装饰器添加到编辑器中。
 
-### deltaDecorations
+##  deltaDecorations
 + 语法: `deltaDecorations(oldDecorations: string[], newDecorations: IModelDeltaDecoration[]): string[]`
 + 参数: `oldDecorations, newDecorations`
 + 返回值: `string[]`
@@ -801,7 +801,7 @@ editor.deltaDecorations(decorations.getDecorations().map(d => d.id), decorations
 ```
 在这个示例中，我们创建了一个编辑器，并使用 createDecorationsCollection 方法创建了一个装饰器集合。我们通过调用 createDecoration 方法来创建一个装饰器，它的位置为第一行第一列，样式为整行高亮，类名为 my-decoration。然后，我们通过调用 deltaDecorations 方法将这个装饰器添加到编辑器中。接着，我们通过调用 changeDecoration 方法来修改这个装饰器的样式，将类名改为 my-new-decoration。最后，我们通过调用 deltaDecorations 方法来更新编辑器的装饰器信息。
 
-### dispose
+##  dispose
 
 + 语法: `dispose(): void`
 + 参数: `-`
@@ -820,7 +820,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.dispose();
 ```
-### executeCommand
+##  executeCommand
 
 + 语法: `executeCommand(command: string, args?: any[]): void`
 + 参数: `command`
@@ -837,7 +837,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.executeCommand('editor.action.selectAll');
 ```
-### executeCommands
+##  executeCommands
 
 + 语法: `executeCommands(commands: ICommand[], source?: string): void`
 + 参数: `commands`
@@ -861,7 +861,7 @@ editor.executeCommands([
     }
 ]);
 ```
-### executeEdits
+##  executeEdits
 
 + 语法: `executeEdits(source: string, edits: IIdentifiedSingleEditOperation[], endCursorState?: Selection[]): boolean`
 + 参数: `source`
@@ -890,7 +890,7 @@ const edits = [
 const success = editor.executeEdits('my-source', edits);
 console.log(success);
 ```
-### focus
+##  focus
 
 + 语法: `focus(): void`
 + 参数: `-`
@@ -909,7 +909,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.focus();
 ```
-### getAction
+##  getAction
 
 + 语法: `getAction(id: string): IAction`
 + 参数: `id`
@@ -937,7 +937,7 @@ const action = editor.getAction('my-action');
 console.log(action);
 
 ```
-### getBottomForLineNumber
+##  getBottomForLineNumber
 + 语法: `getBottomForLineNumber(lineNumber: number): number`
 + 参数: `lineNumber`
 + 返回值: `number`
@@ -956,7 +956,7 @@ const bottom = editor.getBottomForLineNumber(1);
 console.log(bottom);
 
 ```
-### getContainerDomNode
+##  getContainerDomNode
 + 语法: `getContainerDomNode(): HTMLElement`
 + 参数: `-`
 + 返回值: `HTMLElement`
@@ -974,7 +974,7 @@ const container = editor.getContainerDomNode();
 console.log(container);
 
 ```
-### getContentHeight
+##  getContentHeight
 - 语法: `getContentHeight(): number`
 - 参数: `-`
 - 返回值: `number`
@@ -992,7 +992,7 @@ const height = editor.getContentHeight();
 console.log(height);
 
 ```
-### getContentWidth
+##  getContentWidth
 - 语法: `getContentWidth(): number`
 - 参数: `-`
 - 返回值: `number`
@@ -1010,7 +1010,7 @@ const width = editor.getContentWidth();
 console.log(width);
 
 ```
-### getContribution
+##  getContribution
 - 语法: `getContribution(id: string): any`
 - 参数: `id`
 - 返回值: `any`
@@ -1028,7 +1028,7 @@ const contribution = editor.getContribution('editor.contrib.folding');
 console.log(contribution);
 
 ```
-### getDecorationsInRange
+##  getDecorationsInRange
 - 语法: `getDecorationsInRange(range: IRange): IModelDecoration[]`
 - 参数: `range`
 - 返回值: `IModelDecoration[]`
@@ -1056,7 +1056,7 @@ const decorations = editor.getDecorationsInRange(new monaco.Range(1, 1, 2, 1));
 console.log(decorations);
 
 ```
-### getDomNode
+##  getDomNode
 - 语法: `getDomNode(): HTMLElement`
 - 参数: `-`
 - 返回值: `HTMLElement`
@@ -1077,7 +1077,7 @@ const domNode = editor
 console.log(domNode);
 
 ```
-### getEditorType
+##  getEditorType
 - 语法: `getEditorType(): string`
 - 参数: `-`
 - 返回值: `string`
@@ -1095,7 +1095,7 @@ const type = editor.getEditorType();
 console.log(type);
 
 ```
-### getId
+##  getId
 - 语法: `getId(): string`
 - 参数: `-`
 - 返回值: `string`
@@ -1113,7 +1113,7 @@ const id = editor.getId();
 console.log(id);
 
 ```
-### getLayoutInfo
+##  getLayoutInfo
 - 语法: `getLayoutInfo(): IEditorLayoutInfo`
 - 参数: `-`
 - 返回值: `IEditorLayoutInfo`
@@ -1131,7 +1131,7 @@ const layoutInfo = editor.getLayoutInfo();
 console.log(layoutInfo);
 
 ```
-### getLineDecorations
+##  getLineDecorations
 - 语法: `getLineDecorations(lineNumber: number): IModelDecoration[]`
 - 参数: `lineNumber`
 - 返回值: `IModelDecoration[]`
@@ -1159,7 +1159,7 @@ const decorations = editor.getLineDecorations(1);
 console.log(decorations);
 
 ```
-### getModel
+##  getModel
 - 语法: `getModel(): ITextModel`
 - 参数: `-`
 - 返回值: `ITextModel`
@@ -1177,7 +1177,7 @@ const model = editor.getModel();
 console.log(model);
 
 ```
-### getOffsetForColumn
+##  getOffsetForColumn
 - 语法: `getOffsetForColumn(lineNumber: number, column: number): number`
 - 参数: `lineNumber`
 - 返回值: `number`
@@ -1195,7 +1195,7 @@ const offset = editor.getOffsetForColumn(1, 3);
 console.log(offset);
 
 ```
-### getOption
+##  getOption
 - 语法: `getOption(id: string): any`
 - 参数: `id`
 - 返回值: `any`
@@ -1214,7 +1214,7 @@ const option = editor.getOption('wordWrap');
 console.log(option);
 
 ```
-### getOptions
+##  getOptions
 - 语法: `getOptions(): IEditorOptions`
 - 参数: `-`
 
@@ -1232,7 +1232,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const options = editor.getOptions();
 console.log(options);
 ```
-### getPosition
+##  getPosition
 
 语法: `getPosition(): IPosition`
 参数: `-`
@@ -1252,7 +1252,7 @@ editor.setPosition({ lineNumber: 2, column: 3 });
 const position = editor.getPosition();
 console.log(position);
 ```
-### getRawOptions
+##  getRawOptions
 
 + 语法: `getRawOptions(): IEditorOptions`
 + 参数: `-`
@@ -1271,7 +1271,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const options = editor.getRawOptions();
 console.log(options);
 ```
-### getScrollHeight
+##  getScrollHeight
 
 + 语法: `getScrollHeight(): number`
 + 参数: `-`
@@ -1289,7 +1289,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const height = editor.getScrollHeight();
 console.log(height);
 ```
-### getScrollLeft
+##  getScrollLeft
 
 + 语法: `getScrollLeft(): number`
 + 参数: `-`
@@ -1307,7 +1307,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const scrollLeft = editor.getScrollLeft();
 console.log(scrollLeft);
 ```
-### getScrollTop
+##  getScrollTop
 
 + 语法: `getScrollTop(): number`
 + 参数: `-`
@@ -1325,7 +1325,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const scrollTop = editor.getScrollTop();
 console.log(scrollTop);
 ```
-### getScrollWidth
+##  getScrollWidth
 
 + 语法: `getScrollWidth(): number`
 + 参数: `-`
@@ -1343,7 +1343,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const width = editor.getScrollWidth();
 console.log(width);
 ```
-### getScrolledVisiblePosition
+##  getScrolledVisiblePosition
 
 + 语法: `getScrolledVisiblePosition(position: IPosition): { top: number, left: number, height: number }`
 + 参数: `position`
@@ -1369,7 +1369,7 @@ console.log(visiblePosition);
 ```
 在这个示例中，我们创建了一个编辑器，并获取了第二行第三列的位置在编辑器中可见的位置信息。
 
-### getSelection
+##  getSelection
 
 + 语法: `getSelection(): Selection`
 + 参数: `-`
@@ -1390,7 +1390,7 @@ editor.setSelection(new monaco.Range(2, 1, 2, 6));
 const selection = editor.getSelection();
 console.log(selection);
 ```
-### getSelections
+##  getSelections
 
 + 语法: `getSelections(): Selection[]`
 + 参数: `-`
@@ -1414,7 +1414,7 @@ editor.setSelections([
 const selections = editor.getSelections();
 console.log(selections);
 ```
-### getSupportedActions
+##  getSupportedActions
 
 + 语法: `getSupportedActions(): string[]`
 + 参数: `-`
@@ -1432,7 +1432,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const actions = editor.getSupportedActions();
 console.log(actions);
 ```
-### getTargetAtClientPoint
+##  getTargetAtClientPoint
 
 + 语法: `getTargetAtClientPoint(clientX: number, clientY: number): IEditorMouseEventTarget | null`
 + 参数: `clientX, clientY`
@@ -1450,7 +1450,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const target = editor.getTargetAtClientPoint(10, 10);
 console.log(target);
 ```
-### getTopForLineNumber
+##  getTopForLineNumber
 
 + 语法: `getTopForLineNumber(lineNumber: number): number`
 + 参数: `lineNumber`
@@ -1468,7 +1468,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const top = editor.getTopForLineNumber(2);
 console.log(top);
 ```
-### getTopForPosition
+##  getTopForPosition
 
 + 语法: `getTopForPosition(position: IPosition): number`
 + 参数: `position`
@@ -1487,7 +1487,7 @@ const position = { lineNumber: 2, column: 3 };
 const top = editor.getTopForPosition(position);
 console.log(top);
 ```
-### getValue
+##  getValue
 
 + 语法: `getValue(): string`
 + 参数: `-`
@@ -1505,7 +1505,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const value = editor.getValue();
 console.log(value);
 ```
-### getVisibleColumnFromPosition
+##  getVisibleColumnFromPosition
 
 + 语法: `getVisibleColumnFromPosition(position: IPosition): number`
 + 参数: `position`
@@ -1524,7 +1524,7 @@ const position = { lineNumber: 1, column: 8 };
 const visibleColumn = editor.getVisibleColumnFromPosition(position);
 console.log(visibleColumn);
 ```
-### getVisibleRanges
+##  getVisibleRanges
 
 + 语法: `getVisibleRanges(): Range[]`
 + 参数: `-`
@@ -1542,7 +1542,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const ranges = editor.getVisibleRanges();
 console.log(ranges);
 ```
-### hasTextFocus
+##  hasTextFocus
 
 + 语法: `hasTextFocus(): boolean`
 + 参数: `-`
@@ -1560,7 +1560,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const hasFocus = editor.hasTextFocus();
 console.log(hasFocus);
 ```
-### hasWidgetFocus
+##  hasWidgetFocus
 
 + 语法: `hasWidgetFocus(): boolean`
 + 参数: `-`
@@ -1578,7 +1578,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const hasFocus = editor.hasWidgetFocus();
 console.log(hasFocus);
 ```
-### layout
+##  layout
 
 + 语法: `layout(dimension?: IDimension): void`
 + 参数: `dimension`
@@ -1595,7 +1595,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.layout();
 ```
-### layoutContentWidget
+##  layoutContentWidget
 
 + 语法: `layoutContentWidget(widget: IContentWidget): void`
 + 参数: `widget`
@@ -1619,7 +1619,7 @@ const widget = {
 editor.addContentWidget(widget);
 editor.layoutContentWidget(widget);
 ```
-### layoutOverlayWidget
+##  layoutOverlayWidget
 
 + 语法: `layoutOverlayWidget(widget: IOverlayWidget): void`
 + 参数: `widget`
@@ -1643,7 +1643,7 @@ const widget = {
 editor.addOverlayWidget(widget);
 editor.layoutOverlayWidget(widget);
 ```
-### onDidDispose
+##  onDidDispose
 
 + 语法: `onDidDispose(listener: () => void): IDisposable`
 + 参数: `listener`
@@ -1668,7 +1668,7 @@ editor.dispose();
 // Dispose the listener
 disposable.dispose();
 ```
-### popUndoStop
+##  popUndoStop
 
 + 语法: `popUndoStop(): void`
 + 参数: `-`
@@ -1687,7 +1687,7 @@ editor.pushUndoStop();
 // Do some editing
 editor.popUndoStop();
 ```
-### pushUndoStop
+##  pushUndoStop
 
 + 语法: `pushUndoStop(): void`
 + 参数: `-`
@@ -1706,7 +1706,7 @@ editor.pushUndoStop();
 // Do some editing
 editor.popUndoStop();
 ```
-### removeContentWidget
+##  removeContentWidget
 
 + 语法: `removeContentWidget(widget: IContentWidget): void`
 + 参数: `widget`
@@ -1730,7 +1730,7 @@ const widget = {
 editor.addContentWidget(widget);
 editor.removeContentWidget(widget);
 ```
-### removeDecorations
+##  removeDecorations
 
 + 语法: `removeDecorations(decorationType: string): void`
 + 参数: `decorationType`
@@ -1751,7 +1751,7 @@ const decorations = editor.deltaDecorations([], [
 
 editor.removeDecorations('my-decoration');
 ```
-### removeOverlayWidget
+##  removeOverlayWidget
 
 + 语法: `removeOverlayWidget(widget: IOverlayWidget): void`
 + 参数: `widget`
@@ -1775,7 +1775,7 @@ const widget = {
 editor.addOverlayWidget(widget);
 editor.removeOverlayWidget(widget);
 ```
-### render
+##  render
 
 + 语法: `render(): void`
 + 参数: `-`
@@ -1793,7 +1793,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 // Do some editing
 editor.render();
 ```
-### restoreViewState
+##  restoreViewState
 
 + 语法: `restoreViewState(state: ICodeEditorViewState): void`
 + 参数: `state`
@@ -1812,7 +1812,7 @@ const state = editor.saveViewState();
 // Do some editing
 editor.restoreViewState(state);
 ```
-### revealLine
+##  revealLine
 
 + 语法: `revealLine(lineNumber: number, scrollType?: ScrollType): void`
 + 参数: `lineNumber, scrollType`
@@ -1829,7 +1829,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLine(2);
 ```
-### revealLineInCenter
+##  revealLineInCenter
 
 + 语法: `revealLineInCenter(lineNumber: number, scrollType?: ScrollType): void`
 + 参数: `lineNumber, scrollType`
@@ -1846,7 +1846,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLineInCenter(2);
 ```
-### revealLineInCenterIfOutsideViewport
+##  revealLineInCenterIfOutsideViewport
 
 + 语法: `revealLineInCenterIfOutsideViewport(lineNumber: number, scrollType?: ScrollType): void`
 + 参数: `lineNumber, scrollType`
@@ -1863,7 +1863,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLineInCenterIfOutsideViewport(2);
 ```
-### revealLineNearTop
+##  revealLineNearTop
 
 + 语法: `revealLineNearTop(lineNumber: number, scrollType?: ScrollType): void`
 + 参数: `lineNumber, scrollType`
@@ -1880,7 +1880,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLineNearTop(2);
 ```
-### revealLines
+##  revealLines
 
 + 语法: `revealLines(startLineNumber: number, endLineNumber: number, scrollType?: ScrollType): void`
 + 参数: `startLineNumber, endLineNumber, scrollType`
@@ -1897,7 +1897,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLines(2, 3);
 ```
-### revealLinesInCenter
+##  revealLinesInCenter
 
 + 语法: `revealLinesInCenter(startLineNumber: number, endLineNumber: number, scrollType?: ScrollType): void`
 + 参数: `startLineNumber, endLineNumber, scrollType`
@@ -1914,7 +1914,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLinesInCenter(2, 3);
 ```
-### revealLinesInCenterIfOutsideViewport
+##  revealLinesInCenterIfOutsideViewport
 
 + 语法: `revealLinesInCenterIfOutsideViewport(startLineNumber: number, endLineNumber: number, scrollType?: ScrollType): void`
 + 参数: `startLineNumber, endLineNumber, scrollType`
@@ -1931,7 +1931,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLinesInCenterIfOutsideViewport(2, 3);
 ```
-### revealLinesNearTop
+##  revealLinesNearTop
 
 + 语法: `revealLinesNearTop(startLineNumber: number, endLineNumber: number, scrollType?: ScrollType): void`
 + 参数: `startLineNumber, endLineNumber, scrollType`
@@ -1948,7 +1948,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLinesNearTop(2, 3);
 ```
-### revealPosition
+##  revealPosition
 
 + 语法: `revealPosition(position: IPosition, scrollType?: ScrollType): void`
 + 参数: `position, scrollType`
@@ -1965,7 +1965,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealPosition({ lineNumber: 1, column: 6 });
 ```
-### revealPositionInCenter
+##  revealPositionInCenter
 
 + 语法: `revealPositionInCenter(position: IPosition, scrollType?: ScrollType): void`
 + 参数: `position, scrollType`
@@ -1982,7 +1982,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealPositionInCenter({ lineNumber: 1, column: 6 });
 ```
-### revealLinesInCenterIfOutsideViewport
+##  revealLinesInCenterIfOutsideViewport
 
 + 语法: `revealLinesInCenterIfOutsideViewport(startLineNumber: number, endLineNumber: number, scrollType?: ScrollType): void`
 + 参数: `startLineNumber, endLineNumber, scrollType`
@@ -1999,7 +1999,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLinesInCenterIfOutsideViewport(2, 3);
 ```
-### revealLinesNearTop
+##  revealLinesNearTop
 
 + 语法: `revealLinesNearTop(startLineNumber: number, endLineNumber: number, scrollType?: ScrollType): void`
 + 参数: `startLineNumber, endLineNumber, scrollType`
@@ -2016,7 +2016,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealLinesNearTop(2, 3);
 ```
-### revealPosition
+##  revealPosition
 
 + 语法: `revealPosition(position: IPosition, scrollType?: ScrollType): void`
 + 参数: `position, scrollType`
@@ -2033,7 +2033,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealPosition({ lineNumber: 1, column: 6 });
 ```
-### revealPositionInCenter
+##  revealPositionInCenter
 
 + 语法: `revealPositionInCenter(position: IPosition, scrollType?: ScrollType): void`
 + 参数: `position, scrollType`
@@ -2050,7 +2050,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealPositionInCenter({ lineNumber: 1, column: 6 });
 ```
-### revealPositionInCenterIfOutsideViewport
+##  revealPositionInCenterIfOutsideViewport
 
 + 语法: `revealPositionInCenterIfOutsideViewport(position: IPosition, scrollType?: ScrollType): void`
 + 参数: `position, scrollType`
@@ -2068,7 +2068,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 editor.revealPositionInCenterIfOutsideViewport({ lineNumber: 1, column: 6 });
 
 ```
-### revealPositionNearTop
+##  revealPositionNearTop
 - 语法: `revealPositionNearTop(position: IPosition, scrollType?: ScrollType): void`
 - 参数: `position, scrollType`
 - 返回值: `-`
@@ -2086,7 +2086,7 @@ language: 'plaintext'
 editor.revealPositionNearTop({ lineNumber: 1, column: 6 });
 
 ```
-### revealRange
+##  revealRange
 - 语法: `revealRange(range: IRange, scrollType?: ScrollType): void`
 - 参数: `range, scrollType`
 - 返回值: `-`
@@ -2104,7 +2104,7 @@ language: 'plaintext'
 editor.revealRange({ startLineNumber: 2, startColumn: 1, endLineNumber: 3, endColumn: 5 });
 
 ```
-### revealRangeAtTop
+##  revealRangeAtTop
 - 语法: `revealRangeAtTop(range: IRange, scrollType?: ScrollType): void`
 - 参数: `range, scrollType`
 - 返回值: `-`
@@ -2122,7 +2122,7 @@ language: 'plaintext'
 editor.revealRangeAtTop({ startLineNumber: 2, startColumn: 1, endLineNumber: 3, endColumn: 5 });
 
 ```
-### revealRangeInCenter
+##  revealRangeInCenter
 - 语法: `revealRangeInCenter(range: IRange, scrollType?: ScrollType): void`
 - 参数: `range, scrollType`
 - 返回值: `-`
@@ -2140,7 +2140,7 @@ language: 'plaintext'
 editor.revealRangeInCenter({ startLineNumber: 2, startColumn: 1, endLineNumber: 3, endColumn: 5 });
 
 ```
-### revealRangeInCenterIfOutsideViewport
+##  revealRangeInCenterIfOutsideViewport
 - 语法: `revealRangeInCenterIfOutsideViewport(range: IRange, scrollType?: ScrollType): void`
 - 参数: `range, scrollType`
 - 返回值: `-`
@@ -2160,7 +2160,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealRangeInCenterIfOutsideViewport({ startLineNumber: 2, startColumn: 1, endLineNumber: 3, endColumn: 5 });
 ```
-### revealRangeNearTop
+##  revealRangeNearTop
 
 + 语法: `revealRangeNearTop(range: IRange, scrollType?: ScrollType): void`
 + 参数: `range, scrollType`
@@ -2177,7 +2177,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealRangeNearTop({ startLineNumber: 2, startColumn: 1, endLineNumber: 3, endColumn: 5 });
 ```
-### revealRangeNearTopIfOutsideViewport
+##  revealRangeNearTopIfOutsideViewport
 
 + 语法: `revealRangeNearTopIfOutsideViewport(range: IRange, scrollType?: ScrollType): void`
 + 参数: `range, scrollType`
@@ -2194,7 +2194,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.revealRangeNearTopIfOutsideViewport({ startLineNumber: 2, startColumn: 1, endLineNumber: 3, endColumn: 5 });
 ```
-### saveViewState
+##  saveViewState
 
 + 语法: `saveViewState(): ICodeEditorViewState | null`
 + 参数: `-`
@@ -2210,7 +2210,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 const viewState = editor.saveViewState();
 ```
-### setBanner
+##  setBanner
 
 + 语法: `setBanner(banner: IBanner): IDisposable`
 + 参数: `banner`
@@ -2249,7 +2249,7 @@ const banner = {
 
 const disposable = editor.setBanner(banner);
 ```
-### setModel
+##  setModel
 
 + 语法: `setModel(model: ITextModel): void`
 + 参数: `model`
@@ -2267,7 +2267,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 const model = monaco.editor.createModel('Hello, world!', 'plaintext');
 editor.setModel(model);
 ```
-### setPosition
+##  setPosition
 
 + 语法: `setPosition(position: IPosition): void`
 + 参数: `position`
@@ -2284,7 +2284,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.setPosition({ lineNumber: 1, column: 6 });
 ```
-### setScrollPosition
+##  setScrollPosition
 
 + 语法: `setScrollPosition(position: INewScrollPosition): void`
 + 参数: `position`
@@ -2307,7 +2307,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.setScrollPosition({ scrollTop: 100, scrollLeft: 50 });
 ```
-### setSelection
+##  setSelection
 
 + 语法: `setSelection(selection: ISelection): void`
 + 参数: `selection`
@@ -2324,7 +2324,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.setSelection({ startLineNumber: 1, startColumn: 1, endLineNumber: 1, endColumn: 5 });
 ```
-### trigger
+##  trigger
 
 + 语法: `trigger(source: string, handlerId: string, payload?: any): void`
 + 参数: `source, handlerId, payload`
@@ -2341,7 +2341,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.trigger('my-source', 'my-handler', { data: 'Hello' });
 ```
-### updateOptions
+##  updateOptions
 
 + 语法: `updateOptions(newOptions: IEditorOptions): void`
 + 参数: `newOptions`
@@ -2358,7 +2358,7 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 editor.updateOptions({ readOnly: true });
 ```
-### writeScreenReaderContent
+##  writeScreenReaderContent
 
 + 语法: `writeScreenReaderContent(content: string): IDisposable`
 + 参数: `content`

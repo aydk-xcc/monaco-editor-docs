@@ -6,11 +6,13 @@ export default sidebar({
     '/editor/install.md',
     '/editor/create.md',
     '/editor/instance.md',
+    '/editor/TextModel.md',
     '/editor/editor.md',
     '/editor/theme.md',
     '/editor/language.md',
     // '/editor/action.md',
-    '/editor/questions.md'
+    '/editor/questions.md',
+    '/editor/appendix.md'
   ],
   "/language/": [
     '/language/custom-yaml.md',
