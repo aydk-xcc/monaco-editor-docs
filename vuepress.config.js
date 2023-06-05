@@ -4,7 +4,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import theme from './theme/theme';
 
 export default {
-  base: '/monaco-editor-docs/',
+  base: '/',
   head: [['script', 
     { 
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6740405326847035',
