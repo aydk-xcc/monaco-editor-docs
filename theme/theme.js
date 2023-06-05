@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-    hostname: "https://aydk-xcc.github.io/",
+    hostname: "http://aydk.site/",
     author: {
         name: "aydk"
     },
