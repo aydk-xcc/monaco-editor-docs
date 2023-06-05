@@ -37,6 +37,12 @@ jobs:
       - name: Build VuePress site
         run: pnpm docs:build
 
+      - name: Create CNAME file
+        run: echo "aydk.site" > CNAME
+
+      - name: Copy CNAME file to build directory
+        run: cp CNAME docs/.vuepress/dist
+
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
@@ -46,6 +52,7 @@ jobs:
           target_branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
           build_dir: docs/.vuepress/dist
+          cname: aydk.site
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
