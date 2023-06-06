@@ -5,11 +5,10 @@ import theme from './theme/theme';
 
 export default {
   base: '/',
-  head: [['script', 
+  head: [['meta', 
     { 
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6740405326847035',
-      crossorigin: 'anonymous',
-      async : ''
+      name: 'baidu_union_verify',
+      content: 'f3196ecc94e3228c1b7d6190535d098a',
     }
   ]],
   // lang: 'zh-CN',
