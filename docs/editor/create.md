@@ -219,34 +219,11 @@ aria-label="Click me"
 monaco.editor.create(domElement, {
     // ...
     contextmenu: true, // 启用右键菜单
-    contextmenuItems: [
-        { label: 'Cut', id: 'cut', },
-        { label: 'Copy', id: 'copy', },
-        { label: 'Paste', id: 'paste', },
-        { label: 'Select All', id: 'selectAll', },
-        { label: '----', id: 'separator', },
-        { label: 'Custom Action', id: 'customAction', },
-    ],
-    contextmenuCommands: {
-        'customAction': {
-            // 自定义命令的行为
-            execute: function(editor) {
-                // ...
-            },
-            // 自定义命令的可用性
-            isEnabled: function(editor) {
-                // ...
-            },
-            // 自定义命令的标题
-            label: 'Custom Action',
-            // 自定义命令的快捷键
-            keybindings: [
-                monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_E,
-            ],
-        },
-    },
 });
 ```
+::: danger 注意
+contextmenuItems、contextmenuCommands 最新版本已经不再支持
+:::
 ##  copyWithSyntaxHighlighting
 + 类型: `boolean` `可选`
 + 默认值: `-`

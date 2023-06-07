@@ -100,23 +100,39 @@ monaco.languages.register(language);
 示例代码：
 
 ```javascript
-// 引入monaco-editor
-import * as monaco from 'monaco-editor';
-
-// 定义代码操作提供程序对象
-const provider = {
-  provideCodeActions: (model, range, context, token) => {
-    return [];
-  },
-};
-
-// 注册代码操作提供程序
-const disposable = monaco.languages.registerCodeActionProvider('myLanguage', provider);
+const disposable = monaco.languages.registerCodeActionProvider('javascript', {
+  provideCodeActions: function(model, range, context, token) {
+    // 在此处添加自定义代码操作
+    return [
+      {
+        title: 'Custom Code Action',
+        command: 'customCodeAction',
+        arguments: []
+      }
+    ];
+  }
+});
 
 // 取消注册
 disposable.dispose();
 
 ```
+
+该提供程序将在JavaScript文件中提供自定义代码操作。我们传递一个对象作为第二个参数，该对象包含一个 provideCodeActions 方法，该方法将在用户右键单击代码时调用。该方法接收以下参数： 
+ 
+-  model ：编辑器的模型。 
+-  range ：用户右键单击的文本范围。 
+-  context ：包含有关代码操作上下文的信息的对象。 
+-  token ：取消标记，用于在操作提供程序执行时取消操作。 
+ 
+在 provideCodeActions 方法中，我们可以添加自定义代码操作并将其作为数组返回。每个操作都是一个对象，该对象包含以下属性： 
+ 
+-  title ：操作的标题。 
+-  command ：要执行的命令的ID。 
+-  arguments ：传递给命令的参数。在此示例中，我们将空数组传递给命令。 
+ 
+请注意，要执行自定义命令，您需要使用 monaco.commands.registerCommand  API注册命令。
+
 ### registerCodeLensProvider
 
 + 语法: `registerCodeLensProvider(languageId: string, provider: CodeLensProvider): IDisposable`
