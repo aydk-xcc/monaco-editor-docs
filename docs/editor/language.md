@@ -147,12 +147,12 @@ import * as monaco from 'monaco-editor';
 
 // 定义代码镜头提供程序对象
 const provider = {
-provideCodeLenses: (model, token) => {
-return [];
-},
-resolveCodeLens: (model, codeLens, token) => {
-return codeLens;
-},
+  provideCodeLenses: (model, token) => {
+    return [];
+  },
+  resolveCodeLens: (model, codeLens, token) => {
+    return codeLens;
+  },
 };
 
 // 注册代码镜头提供程序
@@ -176,12 +176,12 @@ import * as monaco from 'monaco-editor';
 
 // 定义颜色提供程序对象
 const provider = {
-provideDocumentColors: (model, token) => {
-return [];
-},
-provideColorPresentations: (model, colorInfo, token) => {
-return [];
-},
+  provideDocumentColors: (model, token) => {
+    return [];
+  },
+  provideColorPresentations: (model, colorInfo, token) => {
+    return [];
+  },
 };
 
 // 注册颜色提供程序
