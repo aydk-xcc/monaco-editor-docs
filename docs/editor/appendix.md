@@ -11,7 +11,6 @@ editor = monaco.editor.create(editorRef.value, {
 
 console.log(editor.getContribution('editor.contrib.contextmenu'));
 ```
-这里列的都是默认的action https://github.com/microsoft/monaco-editor/issues/1567
 ##
 ```javascript
 [
