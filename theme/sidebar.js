@@ -20,5 +20,6 @@ export default sidebar({
   "/example/": [
     '/example/README.md',
     '/example/cursor.md',
+    '/example/contextMenu.md',
   ]
 });
