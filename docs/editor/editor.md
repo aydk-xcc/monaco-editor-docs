@@ -1,6 +1,6 @@
 # 编辑器的方法
 编辑器的方法和实例的方法：
-### addCommand
+## addCommand
 
 + 语法: `addCommand(commandId: string, handler: ICommandHandler, context?: string): string`
 + 参数: `commandId, handler, context`
@@ -14,7 +14,7 @@ monaco.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S, () => {
     console.log('Save command triggered');
 });
 ```
-### addEditorAction
+## addEditorAction
 
 + 语法: `addEditorAction(action: IAction): IDisposable`
 + 参数: `action`
@@ -39,7 +39,7 @@ const action = {
 
 const disposable = editor.addEditorAction(action);
 ```
-### addKeybindingRule
+## addKeybindingRule
 
 + 语法: `addKeybindingRule(rule: IKeybindingRule): IDisposable`
 + 参数: `rule`
@@ -66,7 +66,7 @@ const rule = {
 
 const disposable = editor.addKeybindingRule(rule);
 ```
-### addKeybindingRules
+## addKeybindingRules
 
 + 语法: `addKeybindingRules(rules: IKeybindingRule[]): IDisposable`
 + 参数: `rules`
@@ -104,7 +104,7 @@ const rules = [
 
 const disposable = editor.addKeybindingRules(rules);
 ```
-### colorize
+## colorize
 
 + 语法: `colorize(text: string, mimeType: string, options?: IColorizerOptions): Promise`
 + 参数: `text, mimeType, options`
@@ -126,7 +126,7 @@ monaco.editor.colorize(text, mimeType, { theme: 'vs-dark' }).then((html) => {
     console.log(html);
 });
 ```
-### colorizeElement
+## colorizeElement
 
 + 语法: `colorizeElement(element: HTMLElement, options?: IColorizerElementOptions): Promise`
 + 参数: `element, options`
@@ -143,7 +143,7 @@ monaco.editor.colorizeElement(element, { theme: 'vs-dark' }).then(() => {
     console.log('Element colorized');
 });
 ```
-### colorizeModelLine
+## colorizeModelLine
 
 + 语法: `colorizeModelLine(model: ITextModel, lineNumber: number, tabSize?: number): string`
 + 参数: `model, lineNumber, tabSize`
@@ -159,7 +159,7 @@ const html = monaco.editor.colorizeModelLine(model, 1, 4);
 
 console.log(html);
 ```
-### create
+## create
 
 + 语法: `create(domElement: HTMLElement, options?: IEditorConstructionOptions, override?: IEditorOverrideServices): IStandaloneCodeEditor`
 + 参数: `domElement, options, override`
@@ -181,7 +181,7 @@ const editor = monaco.editor.create(domElement, options);
 
 console.log(editor.getValue());
 ```
-### createDiffEditor
+## createDiffEditor
 
 + 语法: `createDiffEditor(domElement: HTMLElement, options?: IDiffEditorConstructionOptions, override?: IEditorOverrideServices): IDiffEditor`
 + 参数: `domElement, options, override`
@@ -211,7 +211,7 @@ console.log(editor.getOriginalEditor().getValue());
 console.log(editor.getModifiedEditor().getValue());
 
 ```
-### createDiffNavigator
+## createDiffNavigator
 + 语法: `createDiffNavigator(diffEditor: IDiffEditor, opts?: IDiffNavigatorOptions): IDiffNavigator`
 + 参数: `diffEditor, opts`
 + 返回值: `IDiffNavigator`
@@ -240,7 +240,7 @@ const navigator = monaco.editor.createDiffNavigator(editor);
 
 navigator.next();
 ```
-### createModel
+## createModel
 
 + 语法: `createModel(value: string, language?: string, uri?: Uri): ITextModel`
 + 参数: `value, language, uri`
@@ -254,7 +254,7 @@ const model = monaco.editor.createModel('function add(a, b) { return a + b; }', 
 
 console.log(model.getValue());
 ```
-### createWebWorker
+## createWebWorker
 
 + 语法: `createWebWorker(opts: IWebWorkerOptions): MonacoWebWorker`
 + 参数: `opts`
@@ -276,7 +276,7 @@ worker.getProxy().then((proxy) => {
     proxy.doSomething();
 });
 ```
-### defineTheme
+## defineTheme
 
 + 语法: `defineTheme(themeName: string, themeData: IStandaloneThemeData): void`
 + 参数: `themeName, themeData`
@@ -306,7 +306,7 @@ monaco.editor.defineTheme('my-theme', {
 
 monaco.editor.setTheme('my-theme');
 ```
-### getDiffEditors
+## getDiffEditors
 
 + 语法: `getDiffEditors(): IDiffEditor[]`
 + 参数: `-`
@@ -335,7 +335,7 @@ const editors = monaco.editor.getDiffEditors();
 
 console.log(editors.length);
 ```
-### getModel
+## getModel
 
 + 语法: `getModel(uri: Uri): ITextModel | null`
 + 参数: `uri`
@@ -353,7 +353,7 @@ if (model) {
     console.log('Model not found');
 }
 ```
-### getModels
+## getModels
 
 + 语法: `getModels(): ITextModel[]`
 + 参数: `-`
@@ -370,7 +370,7 @@ const models = monaco.editor.getModels();
 
 console.log(models.length);
 ```
-### getOrCreateMode
+## getOrCreateMode
 
 + 语法: `getOrCreateMode(languageIdentifier: ILanguageIdentifier): Promise`
 + 参数: `languageIdentifier`
@@ -389,7 +389,7 @@ monaco.editor.getOrCreateMode(languageIdentifier).then((mode) => {
     console.log(mode);
 });
 ```
-### getSupportedLanguages
+## getSupportedLanguages
 
 + 语法: `getSupportedLanguages(): string[]`
 + 参数: `-`
@@ -403,7 +403,7 @@ const languages = monaco.editor.getSupportedLanguages();
 
 console.log(languages);
 ```
-### setModelLanguage
+## setModelLanguage
 
 + 语法: `setModelLanguage(model: ITextModel, languageId: string): void`
 + 参数: `model, languageId`
@@ -420,7 +420,7 @@ console.log(model.getModeId());
 
 
 ```
-### setTheme
+## setTheme
 
 + 语法: `setTheme(themeName: string): void`
 + 参数: `themeName`
@@ -432,7 +432,7 @@ setTheme 方法没有返回值。
 ```javascript
 monaco.editor.setTheme('my-theme');
 ```
-### setColorTheme
+## setColorTheme
 
 + 语法: `setColorTheme(themeName: string): void`
 + 参数: `themeName`
@@ -442,7 +442,7 @@ monaco.editor.setTheme('my-theme');
 ```javascript
 monaco.editor.setColorTheme('my-color-theme');
 ```
-### setLayoutConfiguration
+## setLayoutConfiguration
 
 + 语法: `setLayoutConfiguration(layout: IEditorLayoutInfo): void`
 + 参数: `layout`
@@ -458,7 +458,7 @@ const layout = {
 
 monaco.editor.setLayoutConfiguration(layout);
 ```
-### setModelMarkers
+## setModelMarkers
 
 + 语法: `setModelMarkers(model: ITextModel, owner: string, markers: IMarkerData[]): void`
 + 参数: `model, owner, markers`
@@ -481,7 +481,7 @@ const markers = [
 
 monaco.editor.setModelMarkers(model, 'myMarkerOwner', markers);
 ```
-### setTheme
+## setTheme
 
 + 语法: `setTheme(themeName: string): void`
 + 参数: `themeName`
@@ -493,7 +493,7 @@ monaco.editor.setModelMarkers(model, 'myMarkerOwner', markers);
 ```javascript
 monaco.editor.setTheme('my-theme');
 ```
-### tokenize
+## tokenize
 
 + 语法: `tokenize(text: string, languageId: string): Token[]`
 + 参数: `text, languageId`

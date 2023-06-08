@@ -38,13 +38,13 @@ monaco.editor.setTheme("myTheme");
 
 ![theme-2](/img/theme-2.png)
 通过 `defineTheme` 定义一个主题, `setTheme`设置定义的主题生效。其中`defineTheme` 支持的参数如下：
-### base 
+## base 
 + 类型: `string` `必选`
 + 默认值: ``
 + 可选项: `"vs" | "vs-dark" | "hc-black" | "hc-light"`
 + 描述: `表示主题的基础样式，可以是以下值之一："vs"：Visual Studio 样式。"vs-dark"：Visual Studio 暗色样式。"hc-black"：高对比度黑色样式。"hc-light"：高对比度白色样式`
 
-### colors
+## colors
 + 类型: `IColors` `必选`
 + 默认值: `-`
 + 可选项: `-`
@@ -92,7 +92,7 @@ Copy codemonaco.editor.defineTheme('myTheme', {
 });
 ```
 
-### encodedTokensColors
+## encodedTokensColors
 + 类型: `string[]` `可选`
 + 默认值: `-`
 + 可选项: `-`
@@ -133,39 +133,39 @@ Copy codemonaco.editor.defineTheme('myTheme', {
 ```
 在这个示例中，我们定义了一个名为`string.escape`的编码 token，它的前景色使用了`editorBracketMatch.background`定义的颜色。
 
-### inherit
+## inherit
 + 类型: `boolean` `必选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `表示是否继承基础样式，可以是一个布尔值。`
 
 
-### rules
+## rules
 + 类型: `ITokenThemeRule[]` `必选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `用于定义语法高亮的规则。具体来说，它定义了一个 token 的样式，包括前景色、背景色、字体样式等。`
 
 ::: tip ITokenThemeRule
-#### background
+### background
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `表示 token 的背景色，可以是一个 CSS 颜色值。`
 
-#### fontStyle
+### fontStyle
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `表示 token 的字体样式，可以是一个字符串，包括以下值：`
 
-#### foreground
+### foreground
 + 类型: `string` `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: `表示 token 的前景色，可以是一个 CSS 颜色值。`
 
-#### token
+### token
 + 类型: `string` `必选`
 + 默认值: `-`
 + 可选项: `-`
@@ -186,7 +186,7 @@ Copy codeconst myTheme: monaco.editor.ITokenTheme = {
 这个示例定义了两个规则，分别应用于 `comment`和 `keyword`类型的 token。其中，`comment`类型的token 会使用绿色的前景色和斜体字体样式，而 `keyword`类型的 token 会使用蓝色的前景色和粗体字体样式。
 
 
-### 附录
+## 附录
 官网demo列的颜色的样式
 
 ``` javascript
