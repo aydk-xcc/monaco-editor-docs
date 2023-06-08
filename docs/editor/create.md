@@ -587,6 +587,20 @@ contextmenuItems、contextmenuCommands 最新版本已经不再支持
 + 可选项: `-`
 + 描述: `用于控制缩略图的行为。`
 
+::: tip 配置如下 
++ autohide 控制minimap的渲染方式
++ enabled 一个布尔值，指示是否启用缩略图。默认为 true 。
++ maxColumn 渲染的最大列数，默认是120
++ renderCharacters 一个布尔值，指示是否在缩略图中显示字符。默认为 true 。 
++ scale 字体的放大倍数，默认是1
++ showSlider： "always" | "mouseover"，指示是否显示缩略图上的滑块。默认为'mouseover' ，表示仅在鼠标悬停在缩略图上时显示滑块。如果设置为 true ，则始终显示滑块。如果设置为 false ，则不显示滑块。 
++ side： "right" | "left"，指示缩略图的位置。可以是 left 或 right 。默认为 right 。 
++ size："proportional" | "fill" | "fit"， 不能为数字 
+
+:::
+
+
+
 ##  model
 + 类型: `Object` `可选`
 + 默认值: `-`
@@ -783,7 +797,25 @@ contextmenuItems、contextmenuCommands 最新版本已经不再支持
 + 类型: `Object` `可选`
 + 默认值: `-`
 + 可选项: `-`
-+ 描述: `用于设置滚动条的行为。`
++ 描述: `用于设置滚动条的行为。配置如下`
+
+::: tip 展开配置
++ `alwaysConsumeMouseWheel`: `boolean`, 始终使用鼠标滚轮事件（始终在浏览器事件上调用 preventDefault() 和 stopPropagation()）。默认为true。注意：此选项无法使用 updateOptions() 更新。 
++ `arrowSize`: `number`，指定箭头按钮的大小。默认值为 11 ,注意：此选项无法使用 updateOptions() 更新。
++ `handleMouseWheel`: `boolean`, 指示滚动条是否响应鼠标滚轮事件。默认值为 true 。 
++ `horizontal`: `"auto" | "visible" | "hidden"`, 渲染水平滚动条的方式，默认是auto。
++ `horizontalHasArrows`: `boolean`, 指示水平滚动条是否具有箭头按钮。默认值为 false 。 注意：此选项无法使用 updateOptions() 更新。
++ `horizontalScrollbarSize`: `number`, 水平滚动滑块（注意和下面的区分）的高度，默认是`10`，单位是px。
++ `horizontalSliderSize`: `number`, 水平滚动条滚动条的高度，默认和滑块一致，注意：此选项无法使用 updateOptions() 更新。
++ `scrollByPage`：`boolean`，单击滚动条时，页面时按照页面的大小往下跳动还是直接跳动到点击的位置，默认是false，表示直接跳到点击位置
++ `useShadows`: `boolean` 滚动条是否应使用阴影来指示滚动位置。默认值为 true 。 注意：此选项无法使用 updateOptions() 更新。
++ `vertical`: `"auto" | "visible" | "hidden"`,渲染垂直滚动条的方式，默认是auto。
++ `verticalHasArrows`: `boolean`, 指示垂直滚动条是否具有箭头按钮。默认值为 false 。 注意：此选项无法使用 updateOptions() 更新。
++ `verticalScrollbarSize`：`number`, 垂直滚动滑块（注意和下面的区分）的宽度，默认是`10`，单位是px。
++ `verticalSliderSize`：`number`, 水垂直滚动条滚动条的高度，默认和滑块一致，注意：此选项无法使用 updateOptions() 更新。
+:::
+
+
 
 ##  selectOnLineNumbers
 + 类型: `boolean` `可选`
