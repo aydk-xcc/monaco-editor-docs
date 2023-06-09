@@ -3,11 +3,12 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/editor/": [
     '/editor/declare.md',
-    '/editor/install.md',
+    '/editor/editor.md',
     '/editor/create.md',
     '/editor/instance.md',
+    '/editor/diffEditorOption.md',
+    '/editor/diffEditorInstance.md',
     '/editor/TextModel.md',
-    '/editor/editor.md',
     '/editor/theme.md',
     '/editor/language.md',
     // '/editor/action.md',
@@ -19,6 +20,7 @@ export default sidebar({
   ],
   "/example/": [
     '/example/README.md',
+    '/example/install.md',
     '/example/show.md',
     '/example/cursor.md',
     '/example/contextMenu.md',

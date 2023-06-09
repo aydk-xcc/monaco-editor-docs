@@ -1,10 +1,12 @@
 import { defaultTheme } from 'vuepress';
 import { searchPlugin } from '@vuepress/plugin-search';
+import { shikiPlugin } from "@vuepress/plugin-shiki";
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import theme from './theme/theme';
 
 export default {
   base: '/',
+  lang: 'zh-CN',
   head: [['meta', 
     { 
       name: 'baidu_union_verify',
@@ -24,6 +26,9 @@ export default {
           },
         },
         maxSuggestions: 10
+    }),
+    shikiPlugin({
+      theme: 'dark-plus'
     }),
     googleAnalyticsPlugin({
       // 配置项

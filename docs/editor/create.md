@@ -1,4 +1,4 @@
-# 初始化
+# 编辑器配置(Options)
 ```javascript
 this.editor = monaco.editor.create(document.getElementById('editor'), {
     value: 'const foo = () => 0;',
