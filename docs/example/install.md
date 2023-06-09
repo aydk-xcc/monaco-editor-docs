@@ -4,7 +4,7 @@
 
 ## vue2 + webpack4
 1. 安装
-webpack的版本会影响monaco的版本，这里踩过坑 [vue2 + webpack4 运行报错](../questions.md#vue2--webpack4-运行报错)
+webpack的版本会影响monaco的版本，这里踩过坑 [vue2 + webpack4 运行报错](./questions.md#vue2--webpack4-运行报错)
 ``` javascript
 // webpack5可以选择较新的版本
 npm install --save monaco-editor@0.30.1

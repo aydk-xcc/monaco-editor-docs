@@ -12,6 +12,7 @@ export default hopeTheme({
     logo: "/logo.png",
     title: 'Monaco-editor 学习文档',
     repo: "aydk-xcc/monaco-editor-docs",
+    docsBranch: "master",
     docsDir: "docs",
     navbar: navbar,
 
@@ -67,6 +68,11 @@ export default hopeTheme({
             tabs: true,
             vPre: true,
             vuePlayground: true,
+        },
+        copyCode: {},
+        prismjs: {
+            light: 'coldark-cold',
+            dark: 'vs'
         }
     },
 });

@@ -1,24 +1,33 @@
-# 编辑器的方法
+# 编辑器(editor)
 编辑器的方法和实例的方法：
 ## addCommand
 
-+ 语法: `addCommand(commandId: string, handler: ICommandHandler, context?: string): string`
-+ 参数: `commandId, handler, context`
-+ 返回值: `string`
++ 语法: `addCommand(descriptor: ICommandDescriptor): IDisposable`
++ 参数: `descriptor`, [ICommandDescriptor](#ICommandDescriptor)
++ 返回值: `IDisposable` 这个方法出现的次数会挺多次，作为已经绑定的command的解绑方法
 + 描述: `向编辑器命令服务添加命令处理器`
-
-其中，commandId 参数是一个字符串，表示要添加的命令的 ID；handler 参数是一个 ICommandHandler 类型的函数，表示要添加的命令处理器；context 参数是一个字符串，表示要添加的命令的上下文。addCommand 方法返回一个字符串，表示添加的命令的 ID。
+  
+  其中，commandId 参数是一个字符串，表示要添加的命令的 ID；handler 参数是一个 ICommandHandler 类型的函数，表示要添加的命令处理器；context 参数是一个字符串，表示要添加的命令的上下文。addCommand 方法返回一个字符串，表示添加的命令的 ID。
 示例：
 ```javascript
-monaco.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S, () => {
-    console.log('Save command triggered');
-});
+monaco.editor.addCommand({
+    id: monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S,
+    run: () => {
+        console.log('Save command triggered');
+    }
+})
 ```
+
+### ICommandDescriptor
+
+  + `id`: `string` conmmand 的唯一值
+  + `run`: `ICommandHandler(...args: any[]): void` command调用时的回调函数
+
 ## addEditorAction
 
-+ 语法: `addEditorAction(action: IAction): IDisposable`
-+ 参数: `action`
-+ 返回值: `IDisposable`
++ 语法: `addEditorAction(descriptor: IActionDescriptor): IDisposable`
++ 参数: `descriptor`: [IActionDescriptor](#iactiondescriptor)
++ 返回值: `IDisposable` 同[addCommand](#addcommand)
 + 描述: `向编辑器添加自定义的动作`
 
 其中，action 参数是一个 IAction 对象，用来描述要添加的动作。addEditorAction 方法返回一个 IDisposable 对象，用来取消添加的动作。
@@ -39,15 +48,30 @@ const action = {
 
 const disposable = editor.addEditorAction(action);
 ```
+### IActionDescriptor
+属性说明
+
++ contextMenuGroupId: string, `可选` 用来控制添加的action是否显示到上下文菜单和显示的位置。上下文菜单当前默认的有3类：navigation 分组在所有场合下都是显示第一位；1_modification - 该组紧随其后，包含修改代码的命令；9_cutcopypaste 包含关于代码编辑命令的默认分组；你也可以创建自己的分组，默认是null(不加入到上下文菜单中)
++ contextMenuOrder: number, `可选`  控制在分组的显示的顺序
++ id: string `必选`  action的唯一标识
++ keybindingContext: string, `可选`  绑定规则（优先级高于前提条件）
++ keybindings: number[], `可选`  一组键绑定
++ label: string `必选`  action的label，用户可以在menu中看到的
++ precondition： string `可选`  前提条件
++ run： run(editor: ICodeEditor, ...args: any[])
+
+    + editor： ICodeEditor 编辑器的实例
+    + arg, 其他任意参数
+    + 返回值： `void ｜ Promise<void>`
+
 ## addKeybindingRule
 
-+ 语法: `addKeybindingRule(rule: IKeybindingRule): IDisposable`
++ 语法: addKeybindingRule(rule: [IKeybindingRule](#ikeybindingrule)): IDisposable
 + 参数: `rule`
 + 返回值: `IDisposable`
 + 描述: `向编辑器添加自定义的按键绑定规则`
 
-其中，rule 参数是一个 IKeybindingRule 对象，用来描述要添加的按键绑定规则。addKeybindingRule 方法返回一个 IDisposable 对象，用来取消添加的按键绑定规则。
-示例：
+addKeybindingRule 示例：
 ```javascript
 const editor = monaco.editor.create(document.getElementById('container'), {
     value: '',
@@ -55,21 +79,23 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 });
 
 const rule = {
-    id: 'my-rule',
-    weight: 100,
-    when: undefined,
-    primary: monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S,
-    handler: () => {
-        console.log('My Rule triggered');
-    }
+    command: 'my-rule',
+    when: undefined
 };
 
 const disposable = editor.addKeybindingRule(rule);
 ```
+### IKeybindingRule
+
++ command `可选` 表示要执行的命令的 ID。 
++ commandArgs `可选` 命令的参数
++ keybinding `必选` 表示键盘组合键的描述，例如  Ctrl+Shift+F 。 
++ when `可选` 表示绑定规则的条件，只有条件满足时才会触发绑定规则。
+
 ## addKeybindingRules
 
 + 语法: `addKeybindingRules(rules: IKeybindingRule[]): IDisposable`
-+ 参数: `rules`
++ 参数: `rules` [IKeybindingRule](#ikeybindingrule)
 + 返回值: `IDisposable`
 + 描述: `向编辑器添加多个自定义的按键绑定规则`
 
@@ -83,22 +109,12 @@ const editor = monaco.editor.create(document.getElementById('container'), {
 
 const rules = [
     {
-        id: 'my-rule-1',
-        weight: 100,
-        when: undefined,
-        primary: monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S,
-        handler: () => {
-            console.log('My Rule 1 triggered');
-        }
+        command: 'my-rule',
+    when: undefined
     },
     {
-        id: 'my-rule-2',
-        weight: 100,
-        when: undefined,
-        primary: monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_P,
-        handler: () => {
-            console.log('My Rule 2 triggered');
-        }
+        command: 'my-rule',
+        when: undefined
     }
 ];
 
@@ -106,30 +122,34 @@ const disposable = editor.addKeybindingRules(rules);
 ```
 ## colorize
 
-+ 语法: `colorize(text: string, mimeType: string, options?: IColorizerOptions): Promise`
-+ 参数: `text, mimeType, options`
++ 语法: `colorize(text: string, languageId: string, options: IColorizerOptions): Promise<string>`
++ 参数: `text`, `languageId`, [options](#icolorizeroptions)
 + 返回值: `Promise`
 + 描述: `对指定的文本进行语法高亮处理`
 
-其中，text 参数是一个字符串，表示要进行语法高亮处理的文本；mimeType 参数是一个字符串，表示要进行语法高亮处理的文本的 MIME 类型；options 参数是一个 IColorizerOptions 对象，表示语法高亮处理的选项。colorize 方法返回一个 Promise 对象，表示语法高亮处理
-
-
-
-的结果。
+其中，text 参数是一个字符串，表示要进行语法高亮处理的文本；languageId 参数是一个字符串，表示要进行语法高亮处理的文本的 language id；options 参数是一个 IColorizerOptions 对象，表示语法高亮处理的选项。colorize 方法返回一个 Promise 对象，表示语法高亮处理的结果。
 
 示例：
 ```javascript
 const text = 'function add(a, b) { return a + b; }';
-const mimeType = 'text/javascript';
 
-monaco.editor.colorize(text, mimeType, { theme: 'vs-dark' }).then((html) => {
-    console.log(html);
-});
+monaco.editor.colorize(text, ‘javascript, {
+        tabSize: 4 
+    }).then((html) => {
+        console.log(html);
+    });
 ```
+### IColorizerOptions
+
+
++ tabSize `number` `可选` 一个缩进代表的空格数
+
+
+
 ## colorizeElement
 
 + 语法: `colorizeElement(element: HTMLElement, options?: IColorizerElementOptions): Promise`
-+ 参数: `element, options`
++ 参数: `element`, [options](#icolorizerelementoptions)
 + 返回值: `Promise`
 + 描述: `对指定的 HTML 元素进行语法高亮处理`
 
@@ -139,14 +159,25 @@ monaco.editor.colorize(text, mimeType, { theme: 'vs-dark' }).then((html) => {
 <div id="code">function add(a, b) { return a + b; }</div>
 const element = document.getElementById('code');
 
-monaco.editor.colorizeElement(element, { theme: 'vs-dark' }).then(() => {
+monaco.editor.colorizeElement(element, { 
+        mimeType: 'text/javascript'
+        theme: 'vs-dark',
+        tabSize: 4
+    }).then(() => {
     console.log('Element colorized');
 });
 ```
+### IColorizerElementOptions
+
++ mimeType `string` `可选`  参数是一个字符串，表示要进行语法高亮处理的文本的 MIME 类型
++ tabSize `number` `可选` 一个缩进代表的空格数
++ theme  `string` `可选` 着色使用主题标志
+
+
 ## colorizeModelLine
 
 + 语法: `colorizeModelLine(model: ITextModel, lineNumber: number, tabSize?: number): string`
-+ 参数: `model, lineNumber, tabSize`
++ 参数: [model](./TextModel.md), `lineNumber`, `tabSize`
 + 返回值: `string`
 + 描述: `对指定的文本模型的指定行进行语法高亮处理`
 
@@ -166,7 +197,7 @@ console.log(html);
 + 返回值: `IStandaloneCodeEditor`
 + 描述: `创建一个新的独立的编辑器实例`
 
-其中，domElement 参数是一个 HTMLElement 对象，表示要将编辑器实例附加到的 DOM 元素；options 参数是一个 IEditorConstructionOptions 对象，表示要创建的编辑器实例的选项；override 参数是一个 IEditorOverrideServices 对象，表示要覆盖的编辑器服务。create 方法返回一个 IStandaloneCodeEditor 对象，表示创建的编辑器实例。
+其中，domElement 参数是一个 HTMLElement 对象，表示要将编辑器实例附加到的 DOM 元素；options 参数是一个 [IEditorConstructionOptions 对象](./create.md#options)，表示要创建的编辑器实例的选项；override 参数是一个 IEditorOverrideServices 对象，表示要覆盖的编辑器服务。create 方法返回一个 IStandaloneCodeEditor 对象，表示创建的编辑器实例。
 示例：
 ```javascript
 <div id="container"></div>
