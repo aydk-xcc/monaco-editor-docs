@@ -177,7 +177,7 @@ monaco.editor.colorizeElement(element, {
 ## colorizeModelLine
 
 + 语法: `colorizeModelLine(model: ITextModel, lineNumber: number, tabSize?: number): string`
-+ 参数: [model](./TextModel.md), `lineNumber`, `tabSize`
++ 参数: [model](../models//ITextModel.md), `lineNumber`, `tabSize`
 + 返回值: `string`
 + 描述: `对指定的文本模型的指定行进行语法高亮处理`
 

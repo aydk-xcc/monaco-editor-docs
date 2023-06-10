@@ -1,4 +1,5 @@
-# TextModel
+# ITextModel
+`Interface` 使用很高频的一个模型
 
 ## applyEdits
 + 语法 applyEdits(operations: IIdentifiedSingleEditOperation[]): void

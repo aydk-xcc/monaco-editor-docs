@@ -3,22 +3,27 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   { text: "文档", icon: "discover", link: "/editor/declare.md" },
   {
-    text: "样例",
+    text: "数据模型",
+    icon: "creative",
+    link: "/models/"
+  },
+  {
+    text: "样例(demo)",
     icon: "creative",
     link: "/example/"
   },
-  {
-    text: "自定义语言",
-    icon: "creative",
-    prefix: "/language/",
-    children: [
-      {
-        text: "yaml",
-        icon: "creative",
-        link: 'custom-yaml.md'
-      },
-    ],
-  },
+  // {
+  //   text: "自定义语言",
+  //   icon: "creative",
+  //   prefix: "/language/",
+  //   children: [
+  //     {
+  //       text: "yaml",
+  //       icon: "creative",
+  //       link: 'custom-yaml.md'
+  //     },
+  //   ],
+  // },
   { 
     text: 'Monaco-editor',
     children: [

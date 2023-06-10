@@ -8,7 +8,6 @@ export default sidebar({
     '/editor/instance.md',
     '/editor/diffEditorOption.md',
     '/editor/diffEditorInstance.md',
-    '/editor/TextModel.md',
     '/editor/theme.md',
     '/editor/language.md',
     // '/editor/action.md',
@@ -24,5 +23,21 @@ export default sidebar({
     '/example/show.md',
     '/example/cursor.md',
     '/example/contextMenu.md',
+  ],
+
+  "/models/": [
+    '/models/README.md',
+    '/models/Alias.md',
+    '/models/IDocumentDiff.md',
+    '/models/IDocumentDiffProvider.md',
+    '/models/IDocumentDiffProviderOptions.md',
+    '/models/IEditorFindOptions.md',
+    '/models/IEditorHoverOptions.md',
+    '/models/IGotoLocationOptions.md',
+    '/models/ITextModel.md',
+    '/models/lineRange.md',
+    '/models/lineRange.md',
+    '/models/LineRangeMapping.md',
+  
   ]
 });

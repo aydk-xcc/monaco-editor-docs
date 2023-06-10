@@ -43,7 +43,7 @@ editor.onDidChangeCursorPosition((event) => {
 });
 ```
 在上面的代码中，我们使用 
-[editor.getModel().getWordAtPosition(position)](../editor/TextModel.md#getwordatposition)
+[editor.getModel().getWordAtPosition(position)](../models/ITextModel.md#getwordatposition)
  方法来获取光标所在的单词。这个方法返回一个对象，其中包含单词的起始位置和长度。
 最后使用 
 word.word
