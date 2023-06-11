@@ -24,7 +24,7 @@ pnpm install
 ``` shell
 pnpm docs:dev
 
-// http://localhost:8081/monaco-editor-docs/
+// http://localhost:8081
 ```
 
 ## 3.打包
