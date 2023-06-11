@@ -9,9 +9,15 @@
   + innerChanges: [RangeMapping](RangeMapping.md)
 
 ## 参数 Properties
-  + innerChanges: [RangeMapping](RangeMapping.md) 如果尚未计算内部更改，则将其设置为未定义。 否则，它表示此行范围内的字符级差异。 每个范围映射的原始范围应包含在原始行范围内（修改后相同），换行除外。 不得为空数组。
-  + modifiedRange: [LineRange](lineRange.md) 修改后的文本模型中的行范围
-  + originalRange: [LineRange](lineRange.md) 原始的文本模型中的行范围
+  ### innerChanges:
+  + 类型[RangeMapping](RangeMapping.md) 
+  + 如果尚未计算内部更改，则将其设置为未定义。 否则，它表示此行范围内的字符级差异。 每个范围映射的原始范围应包含在原始行范围内（修改后相同），换行除外。 不得为空数组。
+  ### modifiedRange
+  + 类型 [LineRange](lineRange.md)
+  + 修改后的文本模型中的行范围
+  ### originalRange
+  + 类型 [LineRange](lineRange.md)
+  + 原始的文本模型中的行范围
 
 ## 访问器 Accessors
  + changedLineCount  获取改动的行数
