@@ -72,33 +72,28 @@ monaco.editor.create(document.getElementById('container'), {
 如果将 ariaLabel 设置为一个非空字符串，则编辑器会将其作为 ARIA 标签添加到编辑器的容器元素中，以提高可访问性。
 
 ## autoClosingBrackets
-+ 类型:  [EditorAutoClosingStrategy](#editorautoclosingstrategy)   `可选` 
++ 类型:  [EditorAutoClosingStrategy](../models/Alias.md#editorautoclosingstrategy)   `可选` 
 + 默认值:  `true` 
 + 可选项:  `-` 
 + 描述: 用于控制是否自动闭合括号
 如果将 autoClosingBrackets 设置为 true ，则在输入左括号时，编辑器会自动插入相应的右括号，并将光标放置在括号之间。可以使用 [monaco.languages.setLanguageConfiguration](./language.md#setlanguageconfiguration) 方法设置语言的括号匹配规则。默认以lanuage的设置为准
 
-### EditorAutoClosingStrategy
-
-+ 可选项：`"always" | "languageDefined" | "beforeWhitespace" | "never"`
-+ 控制引号和括号的自动闭合方式
-
 
 ## autoClosingDelete
-+ 类型:  [EditorAutoClosingStrategy](#editorautoclosingstrategy)    `可选` 
++ 类型:  [EditorAutoClosingStrategy](../models/Alias.md#editorautoclosingeditstrategy)    `可选` 
 + 默认值:  `-` 
 + 可选项:  `-` 
 + 描述: 用于控制是否在删除时自动删除闭合的括号
 
 
 ## autoClosingOvertype
-+ 类型:  [EditorAutoClosingStrategy](#editorautoclosingstrategy)   `可选` 
++ 类型:  [EditorAutoClosingStrategy](../models/Alias.md#editorautoclosingeditstrategy)   `可选` 
 + 默认值:  `-` 
 + 可选项:  `-` 
 + 描述: 用于控制是否在覆盖模式下自动闭合括号
 
 ## autoClosingQuotes
-+ 类型:  [EditorAutoClosingStrategy](#editorautoclosingstrategy)    `可选` 
++ 类型:  [EditorAutoClosingStrategy](../models/Alias.md#editorautoclosingstrategy)    `可选` 
 + 默认值:  `-` 
 + 可选项:  `-` 
 + 描述: 用于控制是否自动闭合引号
@@ -118,14 +113,10 @@ monaco.editor.create(document.getElementById('container'), {
 
 
 ## autoSurround
-+ 类型:  [EditorAutoSurroundStrategy](#editorautosurroundstrategy)   `可选` 
++ 类型:  [EditorAutoSurroundStrategy](../models/Alias.md#editorautosurroundstrategy)   `可选` 
 + 默认值:  `languageDefined` 
 + 可选项:  `-` 
 + 描述: 用于控制是否自动包围选定的文本
-
-### EditorAutoSurroundStrategy
-
-+ 可选项 `"languageDefined" | "quotes" | "brackets" | "never"`
 
 ## automaticLayout
 + 类型:  `boolean`   `可选` 
@@ -135,16 +126,11 @@ monaco.editor.create(document.getElementById('container'), {
 如果将 automaticLayout 设置为 true ，则编辑器会在窗口大小发生变化时自动调整大小以适应新的窗口大小。
 
 ## bracketPairColorization
-+ 类型:  [IBracketPairColorizationOptions](#ibracketpaircolorizationoptions)   `可选` 
++ 类型:  [IBracketPairColorizationOptions](../models/IBracketPairColorizationOptions.md)   `可选` 
 + 默认值:  `-` 
 + 可选项:  `-` 
 + 描述: 用于控制是否高亮显示匹配的括号
 如果将 bracketPairColorization 设置为 true ，则编辑器会在输入左括号时高亮显示相应的右括号，并在将光标放在左括号或右括号上时高亮显示相应的匹配括号。
-
-### IBracketPairColorizationOptions
-
-+ enabled `boolean` `可选` 启用或禁用括号对着色
-+ independentColorPoolPerBracketType `boolean` `可选` 每种括号使用独立的颜色池
 
 
 ## codeActionsOnSaveTimeout
@@ -195,15 +181,10 @@ monaco.editor.create(document.getElementById('container'), {
 + 描述: 控制是否启用列选择。
 
 ## comments
-+ 类型:  [IEditorCommentsOptions](#ieditorcommentsoptions)  `可选` 
++ 类型:  [IEditorCommentsOptions](../models/IEditorCommentsOptions.md)  `可选` 
 + 默认值:  `undefined` 
 + 可选项:  `-` 
 + 描述: 控制编辑器中注释的行为。
-
-### IEditorCommentsOptions
-
-+ ignoreEmptyLines `boolean` `可选`  插入行注释时忽略空行。默认为 true。
-+ insertSpace `boolean` `可选` 在行注释标记之后和块注释标记内插入一个空格。默认为true。
 
 ## contextmenu
 + 类型:  `boolean`   `可选` 
@@ -489,15 +470,15 @@ experimental?: {
 + 描述: 控制是否在差异编辑器中启用编辑器。
 
 ## inlayHints
-+ 类型:  `object`   `可选` 
-+ 默认值:  `{ enabled: false, mode: 'only-types' }` 
-+ 可选项:  `{ enabled: boolean, mode: 'only-types' | 'only-inline' | 'all' }` 
++ 类型:  [monaco.editor.IEditorInlayHintsOptions](../models/IEditorInlayHintsOptions.md)   `可选` 
++ 默认值:  `-` 
++ 可选项:  `-` 
 + 描述: 控制是否在编辑器中启用内联提示。
 
 ## inlineSuggest
-+ 类型:  `object`   `可选` 
-+ 默认值:  `{ enabled: false }` 
-+ 可选项:  `{ enabled: boolean }` 
++ 类型:  [monaco.editor.IInlineSuggestOptions](../models/IInlineSuggestOptions.md)   `可选` 
++ 默认值:  `-` 
++ 可选项:  `-}` 
 + 描述: 控制是否在编辑器中启用内联建议。
 
 ## isInEmbeddedEditor
@@ -513,7 +494,7 @@ experimental?: {
 + 描述: 控制字符间距。
 
 ## lightbulb
-+ 类型:  `object`   `可选` 
++ 类型:  [monaco.editor.IEditorLightbulbOptions](../models/IEditorLightbulbOptions.md)   `可选` 
 + 默认值:  `{ enabled: true }` 
 + 可选项:  `{ enabled: boolean }` 
 + 描述: 控制是否在编辑器中启用轻量级提示。
@@ -531,20 +512,20 @@ experimental?: {
 + 描述: 控制行高。
 
 ## lineNumbers
-+ 类型:  `string`   `可选` 
++ 类型: [LineNumbersType](../models/Alias.md#linenumberstype)  `可选` 
 + 默认值:  `on` 
-+ 可选项:  `'on' | 'off' | 'relative' | 'interval' | 'intervalRelative'` 
-+ 描述: 控制是否显示行号。
++ 可选项:  `-` 
++ 描述: 控制行号的呈现。 如果是函数，在渲染一个行号的时候会调用它，渲染返回值。 否则，如果它是真值，行号将被正常渲染（相当于使用恒等函数）。 否则，将不会呈现行号。 默认为开。
 
 ## lineNumbersMinChars
 + 类型:  `number`   `可选` 
 + 默认值:  `5` 
 + 可选项:  `-` 
-+ 描述: 控制行号的最小字符数。
++ 描述: 控制行号的最小字符数。保留水平空间来呈现至少一定数量的数字.
 
 ## linkedEditing
 + 类型:  `boolean`   `可选` 
-+ 默认值:  `true` 
++ 默认值:  `false` 
 + 可选项:  `-` 
 + 描述: 控制是否启用链接编辑。
 
@@ -579,7 +560,7 @@ experimental?: {
 + 描述: 控制最大文件大小 单位MB。
 
 ## minimap
-+ 类型:  `object`   `可选` 
++ 类型:  [editor.IEditorMinimapOptions](../models/IEditorMinimapOptions.md)   `可选` 
 + 默认值:  `{ enabled: true }` 
 + 可选项:  `{ enabled: boolean, maxColumn: number, renderCharacters: boolean, showSlider: 'always' | 'mouseover' }` 
 + 描述: 控制是否显示缩略图。
@@ -670,31 +651,31 @@ experimental?: {
 + 描述: 用于控制概览标尺的宽度。
 
 ## padding
-+ 类型:  `editor.IEditorPaddingOptions`   `可选` 
++ 类型:  [editor.IEditorPaddingOptions](../models/IEditorPaddingOptions.md)   `可选` 
 + 默认值:  `{ top: 0, bottom: 0 }` 
 + 可选项:  `-` 
 + 描述: 用于控制编辑器的填充。
 
 ## parameterHints
-+ 类型:  `editor.IEditorParameterHintOptions`   `可选` 
++ 类型:  [editor.IEditorParameterHintOptions](../models/IEditorParameterHintOptions.md) `可选` 
 + 默认值:  `{ enabled: true }` 
 + 可选项:  `-` 
 + 描述: 用于控制参数提示的行为。
 
 ## pasteAs
-+ 类型:  `editor.IPasteOptions`   `可选` 
++ 类型:  [editor.IPasteOptions](../models/IPasteAsOptions.md)   `可选` 
 + 默认值:  `{ pastedText: 'default' }` 
 + 可选项:  `-` 
 + 描述: 用于控制粘贴时的行为。
 
 ## peekWidgetDefaultFocus
-+ 类型:  `editor.IPeekOptions`   `可选` 
++ 类型:  `enum`  `可选` 
 + 默认值:  `false` 
 + 可选项:  `"tree" | "editor"` 
 + 描述: 用于控制查看小部件的默认焦点。
 
 ## quickSuggestions
-+ 类型:  `boolean`   `可选` 
++ 类型:  `boolean` | [editor.IQuickSuggestionsOptions](../models/IQuickSuggestionsOptions.md)   `可选` 
 + 默认值:  `true` 
 + 可选项:  `-` 
 + 描述: 用于控制是否启用快速建议。
@@ -791,7 +772,7 @@ experimental?: {
 + 描述: 控制编辑器是否使用圆形选择。
 
 ## rulers
-+ 类型:  `number[]`   `可选` 
++ 类型:  (`number`| [IRulerOption](../models/IRulerOption.md))[]   `可选` 
 + 默认值:  `[]` 
 + 可选项:  `-` 
 + 描述: 控制编辑器的垂直标尺的位置。
@@ -821,7 +802,7 @@ experimental?: {
 + 描述: 控制编辑器在垂直和水平滚动时是否只滚动主轴。
 
 ## scrollbar
-+ 类型:  `monaco.editor.IEditorScrollbarOptions`   `可选` 
++ 类型:  [IEditorScrollbarOptions](../models/IEditorScrollbarOptions.md)  `可选` 
 + 默认值:  `{}`  
 + 可选项:  `-` 
 + 描述: 控制编辑器滚动条的外观和行为。
@@ -863,7 +844,7 @@ experimental?: {
 + 描述: 控制是否应该显示未使用的代码。
 
 ## smartSelect
-+ 类型:  `boolean`   `可选` 
++ 类型:  [ISmartSelectOptions](../models/ISmartSelectOptions.md)   `可选` 
 + 默认值:  `true` 
 + 可选项:  `-` 
 + 描述: 控制编辑器是否应该使用智能选择。
@@ -887,7 +868,7 @@ experimental?: {
 + 描述: 控制拆分编辑器的默认比率。必须是0-1之间的数字
 
 ## stickyScroll
-+ 类型:  `boolean`   `可选` 
++ 类型:  [IEditorStickyScrollOptions](../models/IEditorStickyScrollOptions.md)   `可选` 
 + 默认值:  `true` 
 + 可选项:  `-` 
 + 描述: 控制编辑器是否应该在滚动时保持光标位置不变。
@@ -905,7 +886,7 @@ experimental?: {
 + 描述: 控制编辑器在渲染时停止渲染行的数量。
 
 ## suggest
-+ 类型:  `monaco.languages.CompletionOptions`   `可选` 
++ 类型:  [ISuggestOptions](../models/ISuggestOptions.md)   `可选` 
 + 默认值:  `{}`  
 + 可选项:  `-` 
 + 描述: 控制编辑器的建议行为。
@@ -970,7 +951,7 @@ experimental?: {
 + 描述: 控制编辑器是否应该在单击行末时展开该行。
 
 ## unicodeHighlight
-+ 类型:  `boolean`   `可选` 
++ 类型:  [IUnicodeHighlightOptions](../models/IUnicodeHighlightOptions.md)   `可选` 
 + 默认值:  `true` 
 + 可选项:  `-` 
 + 描述: 控制编辑器是否应该突出显示 Unicode 字符。
