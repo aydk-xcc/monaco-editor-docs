@@ -1,7 +1,7 @@
 # monaco-editor-docs
 monaco-editor 中文文档
 
-肝力有限，求点赞
+肝力有限，求点赞~~
 
 这是个人在使用Monaco-editor时，官网的查看缺少例子，所以采用文档比较详细的vue文档风格进行整理。
 
