@@ -2,8 +2,8 @@
 
 ## 滚动条
 
-待补充 可参考 [scrollbar](../editor/create.md#scrollbar)
+待补充 可参考 [scrollbar](../editor/interfaces/IDiffEditorConstructionOptions.md#scrollbar)
 
 ## 缩略图
 
-待补充 可参考 [minimap](../editor/create.md#minimap)
+待补充 可参考 [minimap](../editor/interfaces/IDiffEditorConstructionOptions.md#minimap)
