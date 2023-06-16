@@ -1,4 +1,8 @@
-# contextmenu
+---
+order: 3
+---
+
+# 菜单
 
 关于鼠标右键的菜单定义相关的例子：
 
@@ -61,7 +65,7 @@ let menus = actions.MenuRegistry._menuItems;
 
 ## 自定义菜单
 
-直接使用 实例的[addAction](../editor/instance.md#addaction)方法即可
+直接使用 实例的[addAction](../editor/editor.md#addaction)方法即可
 
 ```javascript
 

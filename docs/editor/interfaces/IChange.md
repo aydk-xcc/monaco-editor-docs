@@ -1,0 +1,25 @@
+# IChange
+`interface` [官网地址](https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IChange.html)
+
+## 属性 Properties
+
+### modifiedEndLineNumber
++ 类型： `number` ， `只读` 
++ 默认值： `-` 
++ 可选项： `-` 
++ 描述： `修改后的文本结束行号，用于表示修改的范围。此属性通常用于描述文本修改的位置和范围，在编辑器中进行文本修改操作时会被使用。` 
+ ### modifiedStartLineNumber
++ 类型： `number` ， `只读` 
++ 默认值： `-` 
++ 可选项： `-` 
++ 描述： `修改后的文本开始行号，用于表示修改的范围。此属性通常用于描述文本修改的位置和范围，在编辑器中进行文本修改操作时会被使用。` 
+ ### originalEndLineNumber
++ 类型： `number` ， `只读` 
++ 默认值： `-` 
++ 可选项： `-` 
++ 描述： `原始文本结束行号，用于表示修改的范围。此属性通常用于描述文本修改的位置和范围，在编辑器中进行文本修改操作时会被使用。` 
+ ### originalStartLineNumber
++ 类型： `number` ， `只读` 
++ 默认值： `-` 
++ 可选项： `-` 
++ 描述： `原始文本开始行号，用于表示修改的范围。此属性通常用于描述文本修改的位置和范围，在编辑器中进行文本修改操作时会被使用。` 
