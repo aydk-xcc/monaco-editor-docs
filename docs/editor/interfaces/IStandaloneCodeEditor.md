@@ -2331,7 +2331,12 @@ editor.setSelection({ startLineNumber: 1, startColumn: 1, endLineNumber: 1, endC
 + 参数: `source, handlerId, payload`
 + 返回值: `-`
 + 描述: `触发编辑器的命令处理器`
-
+::: tip 如果版本是0.30的请用以下方式触发
+editor.getAction(handlerId : string | array)._run() 
+```javascript
+editor.getAction('editor.action.formatDocument')._run() 
+```
+:::
 其中，source 参数是一个字符串，表示命令的来源；handlerId 参数是一个字符串，表示要触发的命令处理器的 ID；payload 参数是一个任意类型的值，表示要传递给命令处理器的数据。
 示例：
 ```javascript
