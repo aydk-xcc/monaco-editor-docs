@@ -25,5 +25,5 @@
 + 参数: 
   + value: V
   + update： V
-+ 返回值: [ApplyUpdateResult](../classes/ApplyUpdateResult.md)<V>
++ 返回值: [ApplyUpdateResult](../classes/ApplyUpdateResult.md)\<V\>
 + 描述: `可能修改值`

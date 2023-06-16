@@ -6,5 +6,5 @@
 + 语法: `get<T>(id: T): FindComputedEditorOptionValueById<T>`
 + 参数: 
   + id: T
-+ 返回值: [FindComputedEditorOptionValueById](../aliase.md#findcomputededitoroptionvaluebyid)<T>
++ 返回值: [FindComputedEditorOptionValueById](../aliase.md#findcomputededitoroptionvaluebyid)\<T\>
 + 描述: ``
