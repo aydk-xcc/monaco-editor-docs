@@ -53,7 +53,7 @@ const disposable = monaco.languages.onLanguage('javascript', () => {
 disposable.dispose();
 ```
 ## onLanguageEncountered
-+ 语法: `nLanguageEncountered(callback: (languageId: string) => void): IDisposabl`
++ 语法: `onLanguageEncountered(callback: (languageId: string) => void): IDisposabl`
 + 参数: `allback` 当遇到未注册的语言时要执行的回调函数，该函数接收一个参数`languageId`，表示遇到的未注册语言的ID。
 + 返回值: `IDisposable`一个对象，用于取消监听。
 描述: 用于监听遇到未注册的语言事件。
@@ -72,8 +72,9 @@ const disposable = monaco.languages.onLanguageEncountered((languageId) => {
 disposable.dispose();
 ```
 ## register
-+ 语法: `egister(language: ILanguageExtensionPoint): voi`
-+ 参数: `anguage`要注册的语言的扩展点对象。
++ 语法: `register(language: ILanguageExtensionPoint): voi`
++ 参数: 
+  + `language`: [ILanguageExtensionPoint](./interfaces/ILanguageExtensionPoint.md)  要注册的语言的扩展点对象。
 描述: 用于注册一种新的语言。
 示例代码：
 ```javascript
@@ -93,10 +94,13 @@ const language = {
 monaco.languages.register(language);
 ```
 ## registerCodeActionProvider
-+ 语法: `egisterCodeActionProvider(languageId: string, provider: CodeActionProvider): IDisposable`
-+ 参数:`languageId`要注册代码操作提供程序的语言ID。`provider`代码操作提供程序对象。
++ 语法: `registerCodeActionProvider(languageSelector: LanguageSelector, provider: CodeActionProvider, metadata?: CodeActionProviderMetadata): IDisposable`
++ 参数:
+  + languageSelector: [LanguageSelector](./alias.md#languageselector)
+  + provider: [CodeActionProvider](./interfaces/CodeActionProvider.md)
+  + metadata: [CodeActionProviderMetadata](./interfaces/CodeActionProviderMetadata.md)
 + 返回值: `IDisposable`一个对象，用于取消注册。
-描述: 用于注册代码操作提供程序。
+描述: 用于注册一个代码操作提供程序。它的作用是在编辑器中显示一个菜单，当用户选择其中一个操作时，将在文本中执行操作。
 示例代码：
 
 ```javascript
