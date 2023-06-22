@@ -122,25 +122,12 @@ disposable.dispose();
 
 ```
 
-该提供程序将在JavaScript文件中提供自定义代码操作。我们传递一个对象作为第二个参数，该对象包含一个 provideCodeActions 方法，该方法将在用户右键单击代码时调用。该方法接收以下参数： 
- 
--  model ：编辑器的模型。 
--  range ：用户右键单击的文本范围。 
--  context ：包含有关代码操作上下文的信息的对象。 
--  token ：取消标记，用于在操作提供程序执行时取消操作。 
- 
-在 provideCodeActions 方法中，我们可以添加自定义代码操作并将其作为数组返回。每个操作都是一个对象，该对象包含以下属性： 
- 
--  title ：操作的标题。 
--  command ：要执行的命令的ID。 
--  arguments ：传递给命令的参数。在此示例中，我们将空数组传递给命令。 
- 
-请注意，要执行自定义命令，您需要使用 monaco.commands.registerCommand  API注册命令。
-
 ## registerCodeLensProvider
 
-+ 语法: `registerCodeLensProvider(languageId: string, provider: CodeLensProvider): IDisposable`
-+ 参数:   `languageId` 要注册代码镜头提供程序的语言ID。`provider` 代码镜头提供程序对象。
++ 语法: `registerCodeLensProvider(languageSelector: LanguageSelector, provider: CodeLensProvider): IDisposable`
++ 参数: 
+  + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册代码镜头提供程序的语言ID。
+  + `provider`: [CodeLensProvider](./interfaces/CodeLensProvider.md) 代码镜头提供程序对象。
 + 返回值: `IDisposable` 一个对象，用于取消注册。
 描述: 用于注册代码镜头提供程序。
 
@@ -167,9 +154,10 @@ disposable.dispose();
 ```
 ## registerColorProvider
 
-+ 语法: `registerColorProvider(languageId: string, provider: DocumentColorProvider): IDisposable`
-+ 参数:   `languageId` 要注册颜色提供程序的语言ID。
-  `provider` 颜色提供程序对象。
++ 语法: `registerColorProvider(languageSelector: LanguageSelector, provider: DocumentColorProvider): IDisposable`
++ 参数:
+  +  `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册颜色提供程序的语言ID。
+  +  `provider`: [DocumentColorProvider](./interfaces/DocumentColorProvider.md) 颜色提供程序对象。
 + 返回值: `IDisposable` 一个对象，用于取消注册。
 描述: 用于注册颜色提供程序。
 
@@ -197,9 +185,10 @@ disposable.dispose();
 ```
 ## registerCompletionItemProvider
 
-+ 语法: `registerCompletionItemProvider(languageId: string, provider: CompletionItemProvider): IDisposable`
-+ 参数:   `languageId` 要注册自动完成提供程序的语言ID。
-  `provider` 自动完成提供程序对象。
++ 语法: `registerCompletionItemProvider(languageSelector: LanguageSelector, provider: CompletionItemProvider): IDisposable`
++ 参数:   
+  + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册颜色提供程序的语言ID。
+  + `provider`: [CompletionItemProvider](./interfaces/CompletionItemProvider.md) 自动完成提供程序对象。
 + 返回值: `IDisposable` 一个对象，用于取消注册。
 描述: 用于注册自动完成提供程序。
 
