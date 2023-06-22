@@ -1,5 +1,5 @@
-# 
-`interface` [官网地址](https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.BracketPairColorizationOptions.html)
+# IStandaloneDiffEditorConstructionOptions
+`interface` [官网地址](https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IStandaloneDiffEditorConstructionOptions.html)
 
 ## 属性 Properties
 ## acceptSuggestionOnCommitCharacter
