@@ -1,5 +1,6 @@
 name: docs
-
+env:
+  NODE_OPTIONS: --max-old-space-size=6144
 on:
   # 每当 push 到 main 分支时触发部署
   push:
