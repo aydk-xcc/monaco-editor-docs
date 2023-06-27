@@ -36,7 +36,7 @@ console.log(languages);
 ## onLanguage
 + 语法: `onLanguage(languageId: string, callback: () => void): IDisposable`
 + 参数: `languageId` 要监听的语言ID。`callback` 当指定语言被注册时要执行的回调函数。
-+ 返回值: `IDisposable`一个对象，用于取消监听。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消监听。
 描述: 用于监听指定语言的注册事件。
 示例代码：
 
@@ -55,7 +55,7 @@ disposable.dispose();
 ## onLanguageEncountered
 + 语法: `onLanguageEncountered(callback: (languageId: string) => void): IDisposabl`
 + 参数: `allback` 当遇到未注册的语言时要执行的回调函数，该函数接收一个参数`languageId`，表示遇到的未注册语言的ID。
-+ 返回值: `IDisposable`一个对象，用于取消监听。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消监听。
 描述: 用于监听遇到未注册的语言事件。
 示例代码：
 
@@ -72,7 +72,7 @@ const disposable = monaco.languages.onLanguageEncountered((languageId) => {
 disposable.dispose();
 ```
 ## register
-+ 语法: `register(language: ILanguageExtensionPoint): voi`
++ 语法: `register(language: ILanguageExtensionPoint): void`
 + 参数: 
   + `language`: [ILanguageExtensionPoint](./interfaces/ILanguageExtensionPoint.md)  要注册的语言的扩展点对象。
 描述: 用于注册一种新的语言。
@@ -99,7 +99,7 @@ monaco.languages.register(language);
   + languageSelector: [LanguageSelector](./alias.md#languageselector)
   + provider: [CodeActionProvider](./interfaces/CodeActionProvider.md)
   + metadata: [CodeActionProviderMetadata](./interfaces/CodeActionProviderMetadata.md)
-+ 返回值: `IDisposable`一个对象，用于取消注册。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消注册。
 描述: 用于注册一个代码操作提供程序。它的作用是在编辑器中显示一个菜单，当用户选择其中一个操作时，将在文本中执行操作。
 示例代码：
 
@@ -128,7 +128,7 @@ disposable.dispose();
 + 参数: 
   + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册代码镜头提供程序的语言ID。
   + `provider`: [CodeLensProvider](./interfaces/CodeLensProvider.md) 代码镜头提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册代码镜头提供程序。
 
 示例代码：
@@ -158,7 +158,7 @@ disposable.dispose();
 + 参数:
   +  `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册颜色提供程序的语言ID。
   +  `provider`: [DocumentColorProvider](./interfaces/DocumentColorProvider.md) 颜色提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册颜色提供程序。
 
 示例代码：
@@ -189,7 +189,7 @@ disposable.dispose();
 + 参数:   
   + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册颜色提供程序的语言ID。
   + `provider`: [CompletionItemProvider](./interfaces/CompletionItemProvider.md) 自动完成提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册自动完成提供程序。
 
 示例代码：
@@ -219,10 +219,11 @@ disposable.dispose();
 ```
 ## registerDeclarationProvider
 
-+ 语法: `registerDeclarationProvider(languageId: string, provider: DeclarationProvider): IDisposable`
-+ 参数:   `languageId` 要注册声明提供程序的语言ID。
-  `provider` 声明提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerDeclarationProvider(languageSelector: LanguageSelector, provider: DeclarationProvider): IDisposable`
++ 参数:   
+  + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册声明提供程序的语言ID。
+  + `provider`： [DeclarationProvider](./interfaces/DeclarationProvider.md) 声明提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册声明提供程序。
 
 示例代码：
@@ -246,10 +247,11 @@ disposable.dispose();
 ```
 ## registerDefinitionProvider
 
-+ 语法: `registerDefinitionProvider(languageId: string, provider: DefinitionProvider): IDisposable`
-+ 参数:   `languageId` 要注册定义提供程序的语言ID。
-  `provider` 定义提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerDefinitionProvider(languageSelector: LanguageSelector, provider: DefinitionProvider): IDisposable`
++ 参数:  
+  + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册定义提供程序的语言ID。
+  + provider: [DefinitionProvider](./interfaces/DefinitionProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册定义提供程序。
 
 示例代码：
@@ -273,10 +275,11 @@ disposable.dispose();
 ```
 ## registerDocumentFormattingEditProvider
 
-+ 语法: `registerDocumentFormattingEditProvider(languageId: string, provider: DocumentFormattingEditProvider): IDisposable`
-+ 参数:   `languageId` 要注册文档格式化提供程序的语言ID。
-  `provider` 文档格式化提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerDocumentFormattingEditProvider(languageSelector: LanguageSelector, provider: DocumentFormattingEditProvider): IDisposable`
++ 参数:   
+  + `languageSelector`： [LanguageSelector](./alias.md#languageselector) 要注册文档格式化提供程序的语言ID。
+  + provider: [DocumentFormattingEditProvider](./interfaces/DocumentFormattingEditProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册文档格式化提供程序。
 
 示例代码：
@@ -300,10 +303,11 @@ disposable.dispose();
 ```
 ## registerDocumentHighlightProvider
 
-+ 语法: `registerDocumentHighlightProvider(languageId: string, provider: DocumentHighlightProvider): IDisposable`
-+ 参数:   `languageId` 要注册文档高亮提供程序的语言ID。
-  `provider` 文档高亮提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerDocumentHighlightProvider(languageSelector: LanguageSelector, provider: DocumentHighlightProvider): IDisposable`
++ 参数: 
+  + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册文档高亮提供程序的语言ID。
+  + provider: [DocumentHighlightProvider](./interfaces/DocumentHighlightProvider.md) 文档高亮提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册文档高亮提供程序。
 
 示例代码：
@@ -327,10 +331,11 @@ disposable.dispose();
 ```
 ## registerDocumentRangeFormattingEditProvider
 
-+ 语法: `registerDocumentRangeFormattingEditProvider(languageId: string, provider: DocumentRangeFormattingEditProvider): IDisposable`
-+ 参数:   `languageId` 要注册文档范围格式化提供程序的语言ID。
-  `provider` 文档范围格式化提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerDocumentRangeFormattingEditProvider(languageSelector: LanguageSelector, provider: DocumentRangeFormattingEditProvider): IDisposable`
++ 参数:  
+  + `languageSelector`: [LanguageSelector](./alias.md#languageselector) 要注册文档范围格式化提供程序的语言ID。
+  + `provider`: [DocumentRangeFormattingEditProvider](./interfaces/DocumentRangeFormattingEditProvider.md) 文档范围格式化提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册文档范围格式化提供程序。
 
 示例代码：
@@ -354,10 +359,11 @@ disposable.dispose();
 ```
 ## registerDocumentRangeSemanticTokensProvider
 
-+ 语法: `registerDocumentRangeSemanticTokensProvider(languageId: string, provider: DocumentRangeSemanticTokensProvider): IDisposable`
-+ 参数:   `languageId` 要注册文档范围语义标记提供程序的语言ID。
-  `provider` 文档范围语义标记提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerDocumentRangeSemanticTokensProvider(languageSelector: LanguageSelector, provider: DocumentRangeSemanticTokensProvider): IDisposable`
++ 参数: 
+  + `languageSelector`: [languageSelector](./alias.md#languageSelector) 要注册文档范围语义标记提供程序的语言ID。
+  + provider: [DocumentRangeSemanticTokensProvider](./interfaces/DocumentRangeSemanticTokensProvider.md) 文档范围语义标记提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册文档范围语义标记提供程序。
 
 示例代码：
@@ -383,11 +389,13 @@ disposable.dispose();
 ```
 ## registerDocumentSemanticTokensProvider
 
-+ 语法: `egisterDocumentSemanticTokensProvider(languageId: string, provider: DocumentSemanticTokensProvider): IDisposable`
-+ 参数:`languageId`要注册文档语义标记提供程序的语言ID。`provider`文档语义标记提供程序对象。
-+ 返回值: `IDisposable`一个对象，用于取消注册。
++ 语法: `registerDocumentSemanticTokensProvider(languageSelector: LanguageSelector, provider: DocumentSemanticTokensProvider): IDisposable`
++ 参数:
+  + `languageSelector`: [languageSelector](./alias.md#languageSelector) 要注册文档范围语义标记提供程序的语言ID。
+  + `provider`: [DocumentSemanticTokensProvider](./interfaces/DocumentSemanticTokensProvider.md) 文档语义标记提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消注册。
 
-描述: 用于注册文档语义标记提供程序。
+描述: 语义标记提供者将补充和增强简单的自上而下标记器。简单的自上而下标记器可以通过 setMonarchTokensProvider 或 setTokensProvider 设置。为了获得最佳用户体验，请注册语义标记提供程序和自上而下的标记生成器。
 示例代码：
 
 ```javascript
@@ -412,9 +420,11 @@ const disposable = monaco.languages.registerDocumentSemanticTokensProvider('myLa
 disposable.dispose();
 ```
 ## registerDocumentSymbolProvider
-+ 语法: `egisterDocumentSymbolProvider(languageId: string, provider: DocumentSymbolProvider): IDisposable`
-+ 参数:`languageId`要注册文档符号提供程序的语言ID。`provider`文档符号提供程序对象。
-+ 返回值: `IDisposable`一个对象，用于取消注册。
++ 语法: `registerDocumentSymbolProvider(languageSelector: LanguageSelector, provider: DocumentSymbolProvider): IDisposable`
++ 参数:
+  + `languageSelector`: [languageSelector](./alias.md#languageSelector) 要注册文档范围语义标记提供程序的语言ID。
+  + provider: [DocumentSymbolProvider](./interfaces/DocumentSymbolProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消注册。
 描述: 用于注册文档符号提供程序。
 示例代码：
 
@@ -436,9 +446,11 @@ const disposable = monaco.languages.registerDocumentSymbolProvider('myLanguage',
 disposable.dispose();
 ```
 ## registerFoldingRangeProvider
-+ 语法: `egisterFoldingRangeProvider(languageId: string, provider: FoldingRangeProvider): IDisposable`
-+参数:`languageId`要注册折叠范围提供程序的语言ID。`provider`折叠范围提供程序对象。
-+ 返回值: `IDisposable`一个对象，用于取消注册。
++ 语法: `registerFoldingRangeProvider(languageSelector: LanguageSelector, provider: FoldingRangeProvider): IDisposable`
++ 参数:
+  + `languageSelector`: [LanguageSelector](./alias.md#LanguageSelector) 要注册折叠范围提供程序的语言ID。
+  + `provider`: [FoldingRangeProvider](./interfaces/FoldingRangeProvider.md) 折叠范围提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消注册。
 
 描述: 用于注册折叠范围提供程序。
 示例代码：
@@ -461,9 +473,11 @@ const disposable = monaco.languages.registerFoldingRangeProvider('myLanguage', p
 disposable.dispose();
 ```
 ## registerHoverProvider
-+ 语法: `egisterHoverProvider(languageId: string, provider: HoverProvider): IDisposable`
-+ 参数:`languageId`要注册悬停提供程序的语言ID。`provider`悬停提供程序对象。
-+ 返回值: `IDisposable`一个对象，用于取消注册。
++ 语法: `registerHoverProvider(languageSelector: LanguageSelector, provider: HoverProvider): IDisposable`
++ 参数:
+  + `languageSelector`：[LanguageSelector](./alias.md#LanguageSelector) 要注册悬停提供程序的语言ID。
+  + `provider`: [HoverProvider](./interfaces/HoverProvider.md) 悬停提供程序对象。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 一个对象，用于取消注册。
 描述: 用于注册悬停提供程序。
 示例代码：
 
@@ -487,8 +501,10 @@ const disposable = monaco.languages.registerHoverProvider('myLanguage', provider
 disposable.dispose();
 ```
 ## registerImplementationProvider
-+ 语法: `egisterImplementationProvider(languageId: string, provider: ImplementationProvider): IDisposable`
-+ 参数: `languageId`要注册实现提供程序的语言ID。`provider`实现提供程序对象。
++ 语法: `registerImplementationProvider(languageSelector: LanguageSelector, provider: ImplementationProvider): IDisposable`
++ 参数: 
+  + `languageSelector`: [LanguageSelector](./alias.md#LanguageSelector) 要注册实现提供程序的语言ID。
+  + `provider`: [ImplementationProvider](./interfaces/ImplementationProvider.md) 实现提供程序对象。
 + 返回值: IDisposable一个对象，用于取消注册。
   
 描述: 用于注册实现提供程序。
@@ -517,7 +533,7 @@ disposable.dispose();
 + 语法: `registerReferenceProvider(languageId: string, provider: ReferenceProvider): IDisposable`
 + 参数:   `languageId` 要注册引用提供程序的语言ID。
   `provider` 引用提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 描述: 用于注册引用提供程序。
 
 示例代码：
@@ -539,12 +555,62 @@ const disposable = monaco.languages.registerReferenceProvider('myLanguage', prov
 disposable.dispose();
 
 ```
+
+## registerInlayHintsProvider
++ 语法: `registerInlayHintsProvider(languageSelector: LanguageSelector, provider: InlayHintsProvider): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [InlayHintsProvider](./interfaces/InlayHintsProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+  
+## registerInlineCompletionsProvider
++ 语法: `registerInlineCompletionsProvider(languageSelector: LanguageSelector, provider: InlineCompletionsProvider<InlineCompletions<InlineCompletion>>): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [InlineCompletionsProvider](./interfaces/InlineCompletionsProvider.md)\<[InlineCompletions](./interfaces/InlineCompletions.md)\<[InlineCompletion](interfaces/InlineCompletion.md)\>\>
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+
+## registerLinkProvider
++ 语法: `registerLinkProvider(languageSelector: LanguageSelector, provider: LinkProvider): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [LinkProvider](./interfaces/LinkProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+  
+## registerLinkedEditingRangeProvider
++ 语法: `registerLinkedEditingRangeProvider(languageSelector: LanguageSelector, provider: LinkedEditingRangeProvider): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [LinkedEditingRangeProvider](./interfaces/LinkedEditingRangeProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+
+## registerOnTypeFormattingEditProvider
++ 语法: `registerOnTypeFormattingEditProvider(languageSelector: LanguageSelector, provider: OnTypeFormattingEditProvider): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [OnTypeFormattingEditProvider](./interfaces/OnTypeFormattingEditProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+
+
+## registerReferenceProvider
++ 语法: `registerReferenceProvider(languageSelector: LanguageSelector, provider: ReferenceProvider): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [ReferenceProvider](./interfaces/ReferenceProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+
 ## registerRenameProvider
 
 + 语法: `registerRenameProvider(languageId: string, provider: RenameProvider): IDisposable`
 + 参数:   `languageId` 要注册重命名提供程序的语言ID。
   `provider` 重命名提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
 + 描述: 用于注册重命名提供程序。
 
 示例代码：
@@ -568,12 +634,24 @@ const disposable = monaco.languages.registerRenameProvider('myLanguage', provide
 disposable.dispose();
 
 ```
+
+## registerSelectionRangeProvider
++ 语法: `registerSelectionRangeProvider(languageSelector: LanguageSelector, provider: SelectionRangeProvider): IDisposable`
++ 参数: 
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [SelectionRangeProvider](./interfaces/SelectionRangeProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md)  一个对象，用于取消注册。
++ 描述: ``
+
+
+
 ## registerSignatureHelpProvider
 
-+ 语法: `registerSignatureHelpProvider(languageId: string, provider: SignatureHelpProvider): IDisposable`
-+ 参数:   `languageId` 要注册签名帮助提供程序的语言ID。
-  `provider` 签名帮助提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
++ 语法: `registerSignatureHelpProvider(languageSelector: LanguageSelector, provider: SignatureHelpProvider): IDisposable`
++ 参数:   
+  + languageSelector: [LanguageSelector](./alias.md#LanguageSelector)
+  + provider: [SignatureHelpProvider](./interfaces/SignatureHelpProvider.md)
++ 返回值: [IDisposable](../global/interfaces/IDisposable.md) 
 + 描述: 用于注册签名帮助提供程序。
 
 示例代码：
@@ -599,36 +677,15 @@ const disposable = monaco.languages.registerSignatureHelpProvider('myLanguage', 
 disposable.dispose();
 
 ```
-## registerTypeDefinitionProvider
 
-+ 语法: `registerTypeDefinitionProvider(languageId: string, provider: TypeDefinitionProvider): IDisposable`
-+ 参数:   `languageId` 要注册类型定义提供程序的语言ID。
-  `provider` 类型定义提供程序对象。
-+ 返回值: `IDisposable` 一个对象，用于取消注册。
-+ 描述: 用于注册类型定义提供程序。
+### registerTokensProviderFactory
++ 语法: `registerTokensProviderFactory(languageId: string, factory: TokensProviderFactory): IDisposable`
++ 参数: 
+  + languageId: `string` 
+  + factory: [TokensProviderFactory](./interfaces/TokensProviderFactory.md)
++ 返回值: `-`
++ 描述: Monaco Editor中的一个方法，用于注册一个标记提供程序工厂。标记提供程序负责为编辑器中的文本提供语法高亮和其他标记信息。以下是使用 registerTokensProviderFactory 方法的示例代码：
 
-示例代码：
-```javascript
-// 引入monaco-editor
-import * as monaco from 'monaco-editor';
-
-// 定义类型定义提供程序对象
-const provider = {
-    provideTypeDefinition: (model, position, token) => {
-        return [];
-    },
-};
-
-// 注册类型定义提供程序
-const disposable = monaco.languages.registerTypeDefinitionProvider('myLanguage', provider);
-
-// 取消注册
-disposable.dispose();
-```
-
-## registerTokensProviderFactory
-
-Monaco Editor中的一个方法，用于注册一个标记提供程序工厂。标记提供程序负责为编辑器中的文本提供语法高亮和其他标记信息。以下是使用 registerTokensProviderFactory 方法的示例代码：
 ```javascript
 monaco.languages.registerTokensProviderFactory('javascript', {
   getInitialState: function() {
@@ -660,9 +717,9 @@ MyTokenizer.tokenize = function(line, state, offsetDelta, stopAtOffset) {
  ## registerTypeDefinitionProvider
 + 用法：`registerTypeDefinitionProvider(languageSelector: LanguageSelector, provider: TypeDefinitionProvider): IDisposable`
 + 参数：
-   + `languageSelector`: `languageSelector`
-   +  `provider`:  `TypeDefinitionProvider`
-+  返回值： `IDisposable`
+   + `languageSelector`: [languageSelector](./alias.md#languageSelector)
+   +  `provider`:  [TypeDefinitionProvider](./interfaces/TypeDefinitionProvider.md)
++  返回值： [IDisposable](../global/interfaces/IDisposable.md) 
 
 允许您为特定语言注册类型定义提供程序。类型定义提供程序允许您为特定类型定义提供跳转和浏览功能。该方法接受两个参数，第一个参数是语言标识符，第二个参数是类型定义提供程序对象。 
 以下是 registerTypeDefinitionProvider 的一个示例用法：
@@ -712,9 +769,9 @@ monaco.editor.create(document.getElementById('container'), {
  ## setLanguageConfiguration
 + 用法：`setLanguageConfiguration(languageId: string, configuration: LanguageConfiguration): IDisposable`
 + 参数：
-   + `languageId` string
-   +  `configuration`:  `LanguageConfiguration`
-+  返回值： `IDisposable`
+   + `languageId`: `string` 
+   +  `configuration`: [LanguageConfiguration](./interfaces/LanguageConfiguration.md) 
++  返回值： [IDisposable](../global/interfaces/IDisposable.md) 
 
 为特定语言设置自定义配置。该方法接受两个参数，第一个参数是语言标识符，第二个参数是包含配置选项的对象。 
 以下是 setLanguageConfiguration 的一个示例用法：
@@ -747,9 +804,9 @@ monaco.editor.create(document.getElementById('container'), {
  ## setMonarchTokensProvider
 + 用法：`setMonarchTokensProvider(languageId: string, languageDef: IMonarchLanguage | Thenable<IMonarchLanguage>): IDisposable`
 + 参数：
-   + `languageId` string
-   +  `languageDef`:  `IMonarchLanguage | Thenable<IMonarchLanguage>`
-+  返回值： `IDisposable`
+   + `languageId`: `string` 
+   +  `languageDef`: [IMonarchLanguage](./interfaces/IMonarchLanguage.md) | Thenable\<[IMonarchLanguage](./interfaces/IMonarchLanguage.md)\>`
++  返回值： [IDisposable](../global/interfaces/IDisposable.md) 
 为编辑器设置自定义语法高亮规则。该方法接受两个参数，第一个参数是语言标识符，第二个参数是包含语法规则的对象。 
 以下是 setMonarchTokensProvider 的一个示例用法：
 ```javascript
@@ -784,9 +841,9 @@ monaco.editor.create(document.getElementById('container'), {
  ## setTokensProvider
  + 用法：`setTokensProvider(languageId: string, provider: TokensProvider | EncodedTokensProvider | Thenable<TokensProvider | EncodedTokensProvider>): IDisposable`
  + 参数：
-   + `languageId` string
-   +  `provider`:  ` TokensProvider | EncodedTokensProvider | Thenable<TokensProvider | EncodedTokensProvider>`
-  +  返回值： `IDisposable`
+   + `languageId`: `string` 
+   +  `provider`:  [TokensProvider](./interfaces/TokensProvider.md) | [EncodedTokensProvider](./interfaces/EncodedTokensProvider.md) | Thenable\<[TokensProvider](./interfaces/TokensProvider.md) | [EncodedTokensProvider](./interfaces/EncodedTokensProvider.md)\>`
+  +  返回值： [IDisposable](../global/interfaces/IDisposable.md) 
 
 允许您为编辑器设置自定义标记提供程序。该方法接受一个参数，该参数是实现 monaco.languages.TokensProvider 接口的对象。 
 以下是 setTokensProvider 的一个示例用法：
