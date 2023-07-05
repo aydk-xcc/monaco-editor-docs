@@ -5,7 +5,7 @@ heroText: Monaco-editor 学习文档
 tagline: 个人学习整理
 actions:
 - text: 开始查看 →
-  link: /editor/declare.md
+  link: /editor/README.md
 features:
 - title: 文档初衷
   details: 这是个人在使用Monaco-editor时，感觉到官网的查看起来比较费劲，所以采用了文档比较详细的vue文档风格进行整理。
