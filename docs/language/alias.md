@@ -2,6 +2,7 @@
 
 ## CharacterPair
 ## Definition
+Definition: [Location](./interfaces/Location.md) | [Location](./interfaces/Location.md)[] | [LocationLink](./interfaces/LocationLink.md)[]
 ## IMonarchLanguageAction
 ## IMonarchLanguageRule
 ## IShortMonarchLanguageAction
