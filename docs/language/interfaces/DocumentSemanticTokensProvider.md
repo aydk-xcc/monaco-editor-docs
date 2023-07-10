@@ -21,7 +21,7 @@
   + model: [ITextModel](../../editor/interfaces/ITextModel.md)
   + lastResultId: `string` 
   + token: [CancellationToken](../../global/interfaces/CancellationToken.md)
-+ 返回值:  [ProviderResult](../alias.md#providerresult)\<[SemanticTokens](./SemanticTokens.md) | [SemanticTokensEdits](./SemanticTokensEdits.md)\>`
++ 返回值:  [ProviderResult](../alias.md#providerresult)\<[SemanticTokens](./SemanticTokens.md) | [SemanticTokensEdits](./SemanticTokensEdits.md)\>
 + 描述: ``
 
 ### releaseDocumentSemanticTokens
