@@ -2,7 +2,7 @@
 `interface` [官网地址](https://microsoft.github.io/monaco-editor/docs.html#interfaces/languages.DocumentSemanticTokensProvider.html)
 ## 属性 Properties
 ### onDidChange
-+ 类型: IEvent<void> `可选`
++ 类型: IEvent\<void\> `可选`
 + 默认值: `-`
 + 可选项: `-`
 + 描述: ``
