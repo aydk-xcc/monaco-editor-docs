@@ -427,24 +427,6 @@ console.log(decorations);
 + 参数:  startLineNumber ,  endLineNumber  
 + 返回值:  IModelDecoration[]  
 + 描述: 获取指定行范围内的装饰。 startLineNumber 和 endLineNumber 参数分别表示要获取装饰的起始行号和结束行号。 
- 
-## getOffsetAt 
-+ 语法:  getOffsetAt(position: IPosition): number  
-+ 参数:  position  
-+ 返回值:  number  
-+ 描述: 获取指定位置的偏移量。 position 参数是一个 IPosition 类型，表示要获取偏移量的位置。 
- 
-## getOptions 
-+ 语法:  getOptions(): TextModelResolvedOptions  
-+ 参数: 无 
-+ 返回值:  TextModelResolvedOptions  
-+ 描述: 获取模型的选项。 
- 
-## getOverviewRulerDecorations 
-+ 语法:  getOverviewRulerDecorations(ownerId: number): IModelDecoration[]  
-+ 参数:  ownerId  
-+ 返回值:  IModelDecoration[]  
-+ 描述: 获取属于指定所有者的概览标尺装饰。 ownerId 参数是一个数字，表示装饰的所有者ID。
 
 ## getOffsetAt 
 + 语法:  getOffsetAt(position: IPosition): number  

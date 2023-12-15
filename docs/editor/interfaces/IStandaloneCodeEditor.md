@@ -754,9 +754,9 @@ console.log(myContextKey.get()); // 输出 'default'
 在这个示例中，我们创建了一个编辑器，并使用 createContextKey 方法创建了一个名为 myContextKey 的上下文键，它的默认值为 'default'。我们通过调用 get 方法来获取当前上下文键的值，输出结果为 'default'。
 
 ##  createDecorationsCollection
-+ 语法: `createDecorationsCollection(ownerId: number): IDecorationsController`
-+ 参数: `ownerId`
-+ 返回值: `IDecorationsController`
++ 语法: `createDecorationsCollection(decorations?: ` [IModelDeltaDecoration](./IModelDeltaDecoration.md) `[]): `[IEditorDecorationsCollection](./IEditorDecorationsCollection.md)
++ 参数: decorations?: [IModelDeltaDecoration[]](./IModelDeltaDecoration.md)  `可选` 
++ 返回值: [IEditorDecorationsCollection](./IEditorDecorationsCollection.md)
 + 描述: `创建一个装饰器集合，用于管理编辑器的装饰器信息`
 
 其中，ownerId 参数是一个数字，用来标识装饰器集合的所有者。
@@ -1030,9 +1030,9 @@ console.log(contribution);
 
 ```
 ##  getDecorationsInRange
-- 语法: `getDecorationsInRange(range: IRange): IModelDecoration[]`
+- 语法: `getDecorationsInRange(range: IRange): ` [IModelDecoration[]](./IModelDecoration.md)
 - 参数: `range`
-- 返回值: `IModelDecoration[]`
+- 返回值: [IModelDecoration[]](./IModelDecoration.md)
 - 描述: `获取指定范围内的装饰器`
 其中，range 参数是一个 IRange 对象，用来表示要获取装饰器的范围。返回值是一个 IModelDecoration 数组，表示指定范围内的装饰器。
 
@@ -1115,9 +1115,9 @@ console.log(id);
 
 ```
 ##  getLayoutInfo
-- 语法: `getLayoutInfo(): IEditorLayoutInfo`
+- 语法: `getLayoutInfo(): ` [EditorLayoutInfo](./EditorLayoutInfo.md)
 - 参数: `-`
-- 返回值: `IEditorLayoutInfo`
+- 返回值: [EditorLayoutInfo](./EditorLayoutInfo.md)
 - 描述: `获取编辑器的布局信息`
 返回值是一个 IEditorLayoutInfo 对象，表示编辑器的布局信息。
 
@@ -1161,9 +1161,9 @@ console.log(decorations);
 
 ```
 ##  getModel
-- 语法: `getModel(): ITextModel`
+- 语法: `getModel():` [ITextModel](./ITextModel.md)
 - 参数: `-`
-- 返回值: `ITextModel`
+- 返回值: [ITextModel](./ITextModel.md)
 - 描述: `获取编辑器的文本模型`
 返回值是一个 ITextModel 对象，表示编辑器的文本模型。
 
