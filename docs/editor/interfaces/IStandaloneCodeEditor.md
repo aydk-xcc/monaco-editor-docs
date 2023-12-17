@@ -4,7 +4,7 @@
 ## 属性 Properties
 
 ##  onContextMenu
-+ 参数: `monaco.editor.IEditorMouseEvent`
++ 参数: [IEditorMouseEvent](./IEditorMouseEvent.md)
 + 描述: `用户右键点击编辑器时触发。可以通过监听这个事件来实现自定义的右键菜单`
 + 示例: 
 ```javascript
@@ -27,7 +27,7 @@ editor.onContextMenu((e: monaco.editor.IEditorMouseEvent) => {
 });
 ```
 ##  onDidAttemptReadOnlyEdit
-+ 参数: `monaco.editor.IReadOnlyEditAttemptEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: `在用户试图编辑只读文本时触发。可以通过监听这个事件来实现自定义的只读文本处理逻辑。`
 + 示例:
 ```javascript
@@ -50,7 +50,7 @@ e.preventDefault()
  方法。
 
 ##  onDidBlurEditorText
-+ 参数: 无
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: 在编辑器失去焦点时触发。可以通过监听这个事件来实现自定义的失焦处理逻辑。
 + 示例:
 ```javascript
@@ -68,7 +68,7 @@ onDidBlurEditorText
  事件。当编辑器失去焦点时，会在控制台输出相关信息。
 
 ##  onDidBlurEditorWidget
-+ 参数: 无
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: 在编辑器小部件失去焦点时触发。可以通过监听这个事件来实现自定义的失焦处理逻辑。
 + 示例:
 ```javascript
@@ -86,7 +86,7 @@ onDidBlurEditorWidget
  事件。当编辑器小部件失去焦点时，会在控制台输出相关信息。
 
 ##  onDidChangeConfiguration
-+ 参数: 无
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[ConfigurationChangedEvent](../classes/ConfigurationChangedEvent.md)\>
 + 描述: 在编辑器配置发生变化时触发。可以通过监听这个事件来实现自定义的配置处理逻辑。
 + 示例:
 ```javascript
@@ -104,7 +104,7 @@ onDidChangeConfiguration
  事件。当编辑器配置发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeCursorPosition
-+ 参数: `monaco.editor.ICursorPositionChangedEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[ICursorPositionChangedEvent](./ICursorPositionChangedEvent.md)\>
 + 描述: 在光标位置发生变化时触发。可以通过监听这个事件来实现自定义的光标位置处理逻辑。
 + 示例:
 ```javascript
@@ -122,7 +122,7 @@ onDidChangeCursorPosition
  事件。当光标位置发生变化时，会在控制台输出相关信息。
 
  ##  onDidChangeCursorSelection
-+ 参数: `monaco.editor.ICursorSelectionChangedEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[ICursorSelectionChangedEvent](./ICursorSelectionChangedEvent.md)\>
 + 描述: `在光标选择发生变化时触发。可以通过监听这个事件来实现自定义的光标选择处理逻辑。`
 + 示例:
 ```javascript
@@ -140,7 +140,7 @@ onDidChangeCursorSelection
  事件。当光标选择发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeHiddenAreas
-+ 参数: `无`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: `在编辑器的隐藏区域发生变化时触发。可以通过监听这个事件来实现自定义的隐藏区域处理逻辑。`
 + 示例:
 ```javascript
@@ -158,7 +158,7 @@ onDidChangeHiddenAreas
  事件。当编辑器的隐藏区域发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeModel
-+ 参数: `monaco.editor.IModelChangedEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IModelChangedEvent](./IModelChangedEvent.md)\>
 + 描述: `在编辑器的模型发生变化时触发。可以通过监听这个事件来实现自定义的模型处理逻辑。`
 + 示例:
 ```javascript
@@ -176,7 +176,7 @@ onDidChangeModel
  事件。当编辑器的模型发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeModelContent
-+ 参数: `monaco.editor.IModelContentChangedEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IModelContentChangedEvent](./IModelContentChangedEvent.md)\>
 + 描述: `在编辑器的模型内容发生变化时触发。可以通过监听这个事件来实现自定义的模型内容处理逻辑。`
 + 示例:
 ```javascript
@@ -192,7 +192,7 @@ editor.onDidChangeModelContent((e: monaco.editor.IModelContentChangedEvent) => {
 在这个示例中，我们创建了一个编辑器，并监听了它的 onDidChangeModelContent事件。当编辑器的模型内容发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeModelDecorations
-+ 参数: `monaco.editor.IModelDecorationsChangedEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IModelDecorationsChangedEvent](./IModelDecorationsChangedEvent.md)\>
 + 描述: `在编辑器的模型装饰发生变化时触发。可以通过监听这个事件来实现自定义的模型装饰处理逻辑。`
 + 示例:
 ```javascript
@@ -220,7 +220,7 @@ onDidChangeModelDecorations
  事件。当编辑器的模型装饰发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeModelLanguage
-+ 参数: `无`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IModelLanguageChangedEvent](./IModelLanguageChangedEvent.md)\>
 + 描述: `在编辑器的模型语言发生变化时触发。可以通过监听这个事件来实现自定义的模型语言处理逻辑。`
 + 示例:
 ```javascript
@@ -238,7 +238,7 @@ onDidChangeModelLanguage
  事件。当编辑器的模型语言发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeModelLanguageConfiguration
-+ 参数: `无`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IModelLanguageConfigurationChangedEvent](./IModelLanguageConfigurationChangedEvent.md)\>
 + 描述: `在编辑器的模型语言配置发生变化时触发。可以通过监听这个事件来实现自定义的模型语言配置处理逻辑。`
 + 示例:
 ```javascript
@@ -256,7 +256,7 @@ onDidChangeModelLanguageConfiguration
  事件。当编辑器的模型语言配置发生变化时，会在控制台输出相关信息。
 
 ##  onDidChangeModelOptions
-+ 参数: `无`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IModelOptionsChangedEvent](./IModelOptionsChangedEvent.md)\>
 + 描述: `在编辑器的模型选项发生变化时触发。可以通过监听这个事件来实现自定义的模型选项处理逻辑。`
 + 示例:
 ```javascript
@@ -274,7 +274,7 @@ onDidChangeModelOptions
  事件。当编辑器的模型选项发生变化时，会在控制台输出相关信息。
 
 ##  onDidCompositionEnd
-+ 参数: `void`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: `在输入法组合结束时触发。可以通过监听这个事件来实现自定义的输入法组合处理逻辑。`
 + 示例:
 ```javascript
@@ -292,7 +292,7 @@ onDidCompositionEnd
  事件。当输入法组合结束时，会在控制台输出相关信息。
 
 ##  onDidCompositionStart
-+ 参数: `void`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: `在输入法组合开始时触发。可以通过监听这个事件来实现自定义的输入法组合处理逻辑。`
 + 示例:
 ```javascript
@@ -310,7 +310,7 @@ onDidCompositionStart
  事件。当输入法组合开始时，会在控制台输出相关信息。
 
 ##  onDidContentSizeChange
-+ 参数: `monaco.editor.IContentSizeChangedEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IContentSizeChangedEvent](./IContentSizeChangedEvent.md)\>
 + 描述: `在编辑器的内容大小发生变化时触发。可以通过监听这个事件来实现自定义的内容大小处理逻辑。`
 + 示例:
 ```javascript
@@ -328,7 +328,7 @@ onDidContentSizeChange
  事件。当编辑器的内容大小发生变化时，会在控制台输出相关信息。
 
 ##  onDidFocusEditorText
-+ 参数: `void`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: `在编辑器文本区域获得焦点时触发。可以通过监听这个事件来实现自定义的文本区域焦点处理逻辑。`
 + 示例:
 ```javascript
@@ -346,7 +346,7 @@ onDidFocusEditorText
  事件。当编辑器文本区域获得焦点时，会在控制台输出相关信息。
 
 ##  onDidFocusEditorWidget
-+ 参数: `void`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<void\>
 + 描述: `在编辑器小部件获得焦点时触发。可以通过监听这个事件来实现自定义的小部件焦点处理逻辑。`
 + 示例:
 ```javascript
@@ -364,7 +364,7 @@ onDidFocusEditorWidget
  事件。当编辑器小部件获得焦点时，会在控制台输出相关信息。
 
  ##  onDidLayoutChange
-+ 参数: `monaco.editor.EditorLayoutInfo`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[EditorLayoutInfo](./EditorLayoutInfo.md)\>
 + 描述: `在编辑器的布局信息发生变化时触发。可以通过监听这个事件来实现自定义的布局处理逻辑。`
 + 示例:
 ```javascript
@@ -382,7 +382,7 @@ onDidLayoutChange
  事件。当编辑器的布局信息发生变化时，会在控制台输出相关信息。
 
 ##  onDidPaste
-+ 参数: `string`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IPasteEvent](./IPasteEvent.md)\>
 + 描述: `在编辑器中粘贴文本时触发。可以通过监听这个事件来实现自定义的粘贴文本处理逻辑。`
 + 示例:
 ```javascript
@@ -400,7 +400,7 @@ onDidPaste
  事件。当在编辑器中粘贴文本时，会在控制台输出相关信息。
 
 ##  onDidScrollChange
-+ 参数: `monaco.editor.IScrollEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IScrollEvent](../../global/interfaces/IScrollEvent.md)\>
 + 描述: `在编辑器的滚动位置发生变化时触发。可以通过监听这个事件来实现自定义的滚动处理逻辑。`
 + 示例:
 ```javascript
@@ -418,7 +418,7 @@ onDidScrollChange
  事件。当编辑器的滚动位置发生变化时，会在控制台输出相关信息。
 
 ##  onKeyDown
-+ 参数: `monaco.IKeyboardEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IKeyboardEvent](../../global/interfaces/IKeyboardEvent.md)\>
 + 描述: `在编辑器中按下键盘按键时触发。可以通过监听这个事件来实现自定义的键盘按键处理逻辑。`
 + 示例:
 ```javascript
@@ -436,7 +436,7 @@ onKeyDown
  事件。当在编辑器中按下键盘按键时，会在控制台输出相关信息。
 
 ##  onKeyUp
-+ 参数: `monaco.IKeyboardEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IKeyboardEvent](../../global/interfaces/IKeyboardEvent.md)\>
 + 描述: `在编辑器中释放键盘按键时触发。可以通过监听这个事件来实现自定义的键盘按键处理逻辑。`
 + 示例:
 ```javascript
@@ -454,7 +454,7 @@ onKeyUp
  事件。当在编辑器中释放键盘按键时，会在控制台输出相关信息。
 
  ##  onMouseDown
-+ 参数: `monaco.editor.IEditorMouseEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IMouseEvent](../../global/interfaces/IMouseEvent.md)\>
 + 描述: `在编辑器中按下鼠标按钮时触发。可以通过监听这个事件来实现自定义的鼠标按键处理逻辑。`
 + 示例:
 ``` javascript
@@ -472,7 +472,7 @@ onMouseDown
  事件。当在编辑器中按下鼠标按钮时，会在控制台输出相关信息。
 
 ##  onMouseLeave
-+ 参数: `monaco.editor.IEditorMouseEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IMouseEvent](../../global/interfaces/IMouseEvent.md)\>
 + 描述: `在鼠标离开编辑器时触发。可以通过监听这个事件来实现自定义的鼠标离开处理逻辑。`
 + 示例:
 ``` javascript
@@ -490,7 +490,7 @@ onMouseLeave
  事件。当鼠标离开编辑器时，会在控制台输出相关信息。
 
 ##  onMouseMove
-+ 参数: `monaco.editor.IEditorMouseEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IMouseEvent](../../global/interfaces/IMouseEvent.md)\>
 + 描述: `在鼠标在编辑器中移动时触发。可以通过监听这个事件来实现自定义的鼠标移动处理逻辑。`
 + 示例:
 ``` javascript
@@ -508,7 +508,7 @@ onMouseMove
  事件。当鼠标在编辑器中移动时，会在控制台输出相关信息。
 
 ##  onMouseUp
-+ 参数: `monaco.editor.IEditorMouseEvent`
++ 参数: [IEvent](../../global/interfaces/IEvent.md)\<[IMouseEvent](../../global/interfaces/IMouseEvent.md)\>
 + 描述: `在编辑器中释放鼠标按钮时触发。可以通过监听这个事件来实现自定义的鼠标按键处理逻辑。`
 + 示例:
 ``` javascript
@@ -528,9 +528,9 @@ onMouseUp
 ## 方法
 
 ##  addAction
-+ 语法: `addAction(descriptor: monaco.editor.IActionDescriptor): IDisposable;`
-+ 参数: `monaco.editor.IActionDescriptor`
-+ 返回值: `IDisposable对象`
++ 语法: `addAction(descriptor:` [IActionDescriptor](./IActionDescriptor.md) : [IDisposable](../../global/interfaces/IDisposable.md)
++ 参数: [IActionDescriptor](./IActionDescriptor.md)
++ 返回值: [IDisposable](../../global/interfaces/IDisposable.md)
 + 描述: `用来向编辑器中添加自定义的操作。`
   
 其中，descriptor参数是一个对象，用来描述要添加的操作。它包含以下属性：
