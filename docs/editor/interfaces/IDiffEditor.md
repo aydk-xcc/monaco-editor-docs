@@ -31,12 +31,11 @@
 
 ## 方法 Methods
 
-### createDecorationsCollection
-+ 语法: `createDecorationsCollection(decorations?: IModelDeltaDecoration[]): IEditorDecorationsCollection`
-+ 参数: 
-    + decorations: [IModelDeltaDecoration](IModelDeltaDecoration.md) `可选` 
-+ 返回值: [IEditorDecorationsCollection](IEditorDecorationsCollection.md)
-+ 描述: `创建一个装饰品集合。通过这个集合添加的所有装饰品都将获得编辑器的 ownerId（这意味着它们不会出现在其他编辑器中）。当编辑器的模型发生变化时，这些装饰会自动清除。`
+###  createDecorationsCollection
++ 语法: `createDecorationsCollection(`decorations?: [IModelDeltaDecoration](../interfaces/IModelDeltaDecoration.md)[]`):` [IEditorDecorationsCollection](../interfaces/IEditorDecorationsCollection.md)
++ 参数: [IModelDeltaDecoration](../interfaces/IModelDeltaDecoration.md)[] `可选` 
++ 返回值: [IEditorDecorationsCollection](../interfaces/IEditorDecorationsCollection.md)
++ 描述: `创建一个装饰集合。通过此集合添加的所有装饰都将获得编辑器的所有者ID（这意味着它们不会显示在其他编辑器中）。当编辑器的模型更改时，这些装饰将自动清除。`
  ### dispose
 + 语法:  `dispose(): void` 
 + 描述:  `释放此小部件使用的所有资源。调用此方法后，小部件将不再被使用。` 
