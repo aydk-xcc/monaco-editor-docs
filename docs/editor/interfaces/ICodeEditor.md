@@ -755,30 +755,15 @@ console.log(myContextKey.get()); // 输出 'default'
 ```
 在这个示例中，我们创建了一个编辑器，并使用 createContextKey 方法创建了一个名为 myContextKey 的上下文键，它的默认值为 'default'。我们通过调用 get 方法来获取当前上下文键的值，输出结果为 'default'。
 
-##  createDecorationsCollection
-+ 语法: `createDecorationsCollection(ownerId: number): IDecorationsController`
-+ 参数: `ownerId`
-+ 返回值: `IDecorationsController`
-+ 描述: `创建一个装饰器集合，用于管理编辑器的装饰器信息`
+## createDecorationsCollection
++ 语法: `createDecorationsCollection(`decorations?: [IModelDeltaDecoration](../interfaces/IModelDeltaDecoration.md)[]`):` [IEditorDecorationsCollection](../interfaces/IEditorDecorationsCollection.md)
++ 参数: [IModelDeltaDecoration](../interfaces/IModelDeltaDecoration.md)[] `可选` 
++ 返回值: [IEditorDecorationsCollection](../interfaces/IEditorDecorationsCollection.md)
++ 描述: `创建一个装饰集合。通过此集合添加的所有装饰都将获得编辑器的所有者ID（这意味着它们不会显示在其他编辑器中）。当编辑器的模型更改时，这些装饰将自动清除。`
 
-其中，ownerId 参数是一个数字，用来标识装饰器集合的所有者。
-下面是一个示例，演示如何使用 createDecorationsCollection 方法创建一个装饰器集合：
-```javascript
-const editor = monaco.editor.create(document.getElementById('container'), {
-    value: '',
-    language: 'plaintext'
-});
-
-const decorations = editor.createDecorationsCollection(1);
-
-decorations.createDecoration(1, 1, { isWholeLine: true, className: 'my-decoration' });
-
-editor.deltaDecorations([], decorations.getDecorations());
-```
-在这个示例中，我们创建了一个编辑器，并使用 createDecorationsCollection 方法创建了一个 ownerId 为 1 的装饰器集合。我们通过调用 createDecoration 方法来创建一个装饰器，它的位置为第一行第一列，样式为整行高亮，类名为 my-decoration。最后，我们通过调用 deltaDecorations 方法来将这个装饰器添加到编辑器中。
 
 ##  deltaDecorations
-+ 语法: `deltaDecorations(oldDecorations: string[], newDecorations: IModelDeltaDecoration[]): string[]`
++ 语法: `deltaDecorations(oldDecorations: string[], newDecorations: ` [IModelDeltaDecoration](../interfaces/IModelDeltaDecoration.md) `[]): string[]`
 + 参数: `oldDecorations, newDecorations`
 + 返回值: `string[]`
 + 描述: `更新编辑器的装饰器信息`
